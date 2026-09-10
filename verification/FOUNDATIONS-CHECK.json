@@ -1,0 +1,123 @@
+{
+  "status": "PASS",
+  "scope": "finite foundations only",
+  "full_optimality_proof_complete": false,
+  "lean_version": "4.33.1",
+  "mathlib_commit": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "audited_declarations": [
+    {
+      "name": "TrafficShaping.Feasible.mono_output",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "TrafficShaping.Feasible.mono_input",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "TrafficShaping.Feasible.card_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "TrafficShaping.Law.zero_privacy_iff_tv",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "TrafficShaping.Law.repair_tv_identity",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "TrafficShaping.Law.privatePair_of_tv",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "TrafficShaping.Law.forbidden_event",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "TrafficShaping.value_attained",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "TrafficShaping.matching_certificate",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "TrafficShaping.terminal_subset_of_feasible",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "TrafficShaping.saturateOn_subset",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "TrafficShaping.exists_fullInput_superset",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "allowed_standard_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "source_sha256": {
+    "formal/TrafficShaping/Model.lean": "c9d1cd2be55c5fa376748488b0944b05544aff5d90d16981638381558a4d9234",
+    "formal/TrafficShaping/Law.lean": "589f17f5ea7c5a8fc03b9318ddd587de26ed0752f8cabdaf63eaa3ac271ef20a",
+    "formal/TrafficShaping/Game.lean": "5a9480ef991557757cc05bc6716667b6e5915291cf6c6aae3b501d6dc7627219",
+    "formal/TrafficShaping/Saturation.lean": "4ed47107d569232bd5f6b33749f17478717297ff30c6b4cf2243d579447bceba",
+    "formal/lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71",
+    "formal/lake-manifest.json": "dbbab0b18d7196198928c634a441be22a3d55832a6425c45c8496b024f7499be"
+  },
+  "pending": [
+    "operational FIFO execution correctness and preservation",
+    "converse for arbitrary semantic causal mechanisms",
+    "concrete all-parameter optimality theorem"
+  ]
+}

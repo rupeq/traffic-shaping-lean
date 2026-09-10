@@ -6,13 +6,13 @@ Repository: [rupeq/traffic-shaping-lean](https://github.com/rupeq/traffic-shapin
 
 ## Computational materials
 
-The `computations/` directory contains the original optimization code, 95 positive-delay primal/dual certificates, independent certificate checkers, exhaustive algorithm checks, and zero-delay and no-savings checks. See [the computational instructions](computations/README.md). A clean verification and full regeneration of all 95 LP values completed successfully; the fresh reports record the checked domains and environment. The GitHub workflow repeats the full reproduction on changes to these materials.
+The `computations/` directory contains the original optimization code, 95 positive-delay primal/dual certificates, independent certificate checkers, exhaustive algorithm checks, and zero-delay and no-savings checks. See [the computational instructions](computations/README.md). A clean verification and full regeneration of all 95 LP values completed successfully; the fresh reports record the checked domains and environment. The GitHub workflow repeats the full reproduction on changes to these materials. The [first clean Linux reproduction](https://github.com/rupeq/traffic-shaping-lean/actions/runs/34526555754) also passed for all 95 values.
 
 ## Formalization status
 
-Lean work is in progress. No complete Lean verification of the manuscript is claimed at this stage. The intended sequence is reproducible computations, proofs of the service lemmas and algorithm, and the full optimality theorem over causal and noncausal mechanisms. Finite numerical checks alone do not prove the general theorem.
+Lean work is in progress. The finite model, probability and total-variation lemmas, finite-game attainment and certificate theorem, and terminal saturation lemmas compile successfully. Their [axiom audit](verification/FOUNDATIONS-CHECK.json) uses only the standard logical axioms of Lean. No complete Lean verification of the manuscript is claimed at this stage. The intended sequence is reproducible computations, proofs of the service lemmas and algorithm, and the full optimality theorem over causal and noncausal mechanisms. Finite numerical checks alone do not prove the general theorem.
 
-The formal development pins Lean and mathlib versions and record the correspondence between manuscript claims and checked theorem declarations. The final verification will reject unfinished proofs and inspect the axioms used by the principal results.
+The formal development pins Lean and mathlib versions and will record the correspondence between manuscript claims and checked theorem declarations. The final verification will reject unfinished proofs and inspect the axioms used by the principal results. See [the pinned environment](docs/TOOLCHAIN.md).
 
 ## Mathematical scope
 
