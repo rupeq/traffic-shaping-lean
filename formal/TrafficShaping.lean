@@ -6,10 +6,10 @@ import TrafficShaping.Matching
 import TrafficShaping.Mechanism
 import TrafficShaping.Converse
 import TrafficShaping.Achievability
+import TrafficShaping.OnAchievability
 import TrafficShaping.MainTheorem
 
 /-!
-Verified finite foundations, matching, both converse bounds, and the complete
-noncausal optimum.  The causal execution proof is being developed separately;
-this entry point does not yet claim the full causal optimality theorem.
+Finite laws, matching, both converse bounds, the concrete causal execution,
+and the exact attained privacy optimum for both mechanism classes.
 -/

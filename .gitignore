@@ -10,3 +10,10 @@ _build/
 !/computations/*.log
 !/review/*.log
 !/verification/*.log
+# Manuscript editions are maintained locally outside this repository.
+/vak-ru/
+/international-en/
+/ru-content-only/
+manuscript.md
+dereviago-*.docx
+dereviago-*.pdf

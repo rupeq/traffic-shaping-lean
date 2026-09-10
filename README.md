@@ -10,12 +10,18 @@ The `computations/` directory contains the original optimization code, 95 positi
 
 ## Formalization status
 
-Lean work is in progress. The default `lake build` now checks the finite foundations, the equivalence of greedy matching and feasibility, both universal converse bounds, the repair total-variation identity, and the **complete noncausal optimum**, including attainment and independence of every finite nonnegative epsilon. The least-element and infimum statements are `noncausal_optimum_isLeast` and `noncausal_optimum_eq` in [MainTheorem.lean](formal/TrafficShaping/MainTheorem.lean).
+The **complete optimum theorem for both mechanism classes** is formalized in Lean 4.33.1. For every `1 ≤ m ≤ B ≤ H`, every natural delay bound `D`, and every real `ε ≥ 0`, the minimum additive loss equals one minus the corresponding finite covering-game value. Both minima are attained already at `ε = 0`. The separate theorem `mechanism_impossible_of_budget_lt` rules out a cap below the admissible workload.
 
-The causal construction and causal optimum are not yet complete. They are the remaining formalization task; the verified causal converse alone does not establish causal attainment. The [current verification record](verification/NONCAUSAL-OPTIMUM-CHECK.json) and [semantic audit](review/ACHIEVABILITY-SEMANTIC-AUDIT.md) state this scope explicitly. All 13 audited declarations use only `propext`, `Classical.choice`, and `Quot.sound`, with no unfinished-proof dependency or additional axiom.
+The declarations `noncausal_optimum_isLeast`, `causal_optimum_isLeast`, `noncausal_optimum_eq`, and `causal_optimum_eq` are in [MainTheorem.lean](formal/TrafficShaping/MainTheorem.lean). The causal attainment proof uses the [actual queue execution](formal/TrafficShaping/ExecutionCore.lean), with delivery, delay, cap, prefix causality, and schedule preservation proved from that execution. The [proof map](review/FORMALIZATION-PLAN.md) identifies the corresponding modules.
 
-Use the [pinned environment](docs/TOOLCHAIN.md), run `lake build` in `formal/`, then run `lake env lean AuditNoncausal.lean` to inspect the dependencies of the principal checked results. Finite numerical checks and a successful build of a subset of modules are not treated as a proof of the full causal theorem.
+The [complete local verification record](verification/FULL-OPTIMUM-CHECK.json) includes command exit codes, the pinned versions, and the before/after hashes of all formal sources. All 29 declarations in [Audit.lean](formal/Audit.lean) use only `propext`, `Classical.choice`, and `Quot.sound`. The source and kernel audits reject unfinished proofs and additional axioms. Earlier verification records remain as dated checkpoints with their original, narrower scope.
+
+Use the [pinned environment](docs/TOOLCHAIN.md), then run `python3 verify_formal.py` from the repository root. It runs `lake build`, `lake env lean Audit.lean`, and the strict source/kernel audit, and writes fresh logs and a JSON record. Use `--lake /path/to/lake` for an explicit compiler installation. The [CI instructions](docs/CI.md) describe the corresponding GitHub checks.
+
+The Lean inventory covers the main optimum theorem, its algorithm, and the supporting lemmas. The secondary closed forms and quantitative resource-gap bounds are outside this formal inventory; their computational checks remain in `computations/`.
 
 ## Mathematical scope
 
 Inputs have publicly known finite duration, at most one arrival per slot, at most `m` real packets in total, a hard per-packet delay bound, and a cap counting all real and dummy transmissions on every execution. Privacy compares each admissible input with the empty input through the complete binary output trace. Broader traffic or observation models require separate arguments.
+
+The manuscript text in either language is maintained outside this repository.

@@ -1,0 +1,782 @@
+⚠ [8705/8723] Replayed TrafficShaping.Game
+warning: TrafficShaping/Game.lean:38:0: automatically included section variable(s) unused in theorem `TrafficShaping.coverage_continuous`:
+  [Fintype I]
+  [Nonempty I]
+  [Nonempty S]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [Nonempty I] [Nonempty S] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TrafficShaping/Game.lean:99:0: automatically included section variable(s) unused in theorem `TrafficShaping.optimal_coverage_ge_value`:
+  [Nonempty S]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty S] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TrafficShaping/Game.lean:108:0: automatically included section variable(s) unused in theorem `TrafficShaping.coverage_nonneg`:
+  [Fintype I]
+  [Nonempty I]
+  [Nonempty S]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [Nonempty I] [Nonempty S] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TrafficShaping/Game.lean:116:0: automatically included section variable(s) unused in theorem `TrafficShaping.coverage_le_one`:
+  [Fintype I]
+  [Nonempty I]
+  [Nonempty S]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [Nonempty I] [Nonempty S] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TrafficShaping/Game.lean:171:0: automatically included section variable(s) unused in theorem `TrafficShaping.weak_duality_certificate`:
+  [Nonempty I]
+  [Nonempty S]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty I] [Nonempty S] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TrafficShaping/Game.lean:214:0: automatically included section variable(s) unused in theorem `TrafficShaping.worst_le_weighted`:
+  [Nonempty S]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty S] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TrafficShaping/Game.lean:232:0: automatically included section variable(s) unused in theorem `TrafficShaping.weighted_coverage_eq`:
+  [Nonempty I]
+  [Nonempty S]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty I] [Nonempty S] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8708/8723] Replayed TrafficShaping.Law
+warning: TrafficShaping/Law.lean:168:17: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: TrafficShaping/Law.lean:225:0: automatically included section variable(s) unused in theorem `TrafficShaping.Law.repair_tv_identity`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TrafficShaping/Law.lean:273:0: automatically included section variable(s) unused in theorem `TrafficShaping.Law.forbidden_event`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TrafficShaping/Law.lean:278:0: automatically included section variable(s) unused in theorem `TrafficShaping.Law.mass_zero_iff`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TrafficShaping/Law.lean:288:0: automatically included section variable(s) unused in theorem `TrafficShaping.Law.exists_of_map_pos`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: TrafficShaping/Law.lean:321:0: automatically included section variable(s) unused in theorem `TrafficShaping.Law.le_map_apply`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8709/8723] Replayed TrafficShaping.Saturation
+warning: TrafficShaping/Saturation.lean:36:44: Variable name `hm` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hm
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: TrafficShaping/Saturation.lean:44:45: Variable name `hm` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hm
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: TrafficShaping/Saturation.lean:77:59: Variable name `hm` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hm
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: TrafficShaping/Saturation.lean:185:49: Variable name `hm` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hm
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8712/8723] Replayed TrafficShaping.Converse
+warning: TrafficShaping/Converse.lean:188:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: TrafficShaping/Converse.lean:189:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: TrafficShaping/Converse.lean:183:46: Variable name `hmb` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hmb
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: TrafficShaping/Converse.lean:210:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: TrafficShaping/Converse.lean:211:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [8713/8723] Replayed TrafficShaping.Achievability
+warning: TrafficShaping/Achievability.lean:172:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: TrafficShaping/Achievability.lean:173:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [8714/8723] Replayed TrafficShaping.ExecutionCore
+warning: TrafficShaping/ExecutionCore.lean:95:45: This simp argument is unused:
+  Finset.mem_insert
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [tracePrefix, Finset.mem_filter]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCore.lean:111:20: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hax, ↓reduceIte]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCore.lean:135:48: Variable name `D` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _D
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: TrafficShaping/ExecutionCore.lean:136:7: Variable name `y` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _y
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: TrafficShaping/ExecutionCore.lean:167:21: This simp argument is unused:
+  htqueue
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [enqueue]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCore.lean:464:25: Try `simp at ha` instead of `simpa using ha`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: TrafficShaping/ExecutionCore.lean:505:25: Try `simp at ha` instead of `simpa using ha`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: TrafficShaping/ExecutionCore.lean:556:21: This simp argument is unused:
+  hm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hq', hq, hty]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCore.lean:556:25: This simp argument is unused:
+  hq'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hm, hq, hty]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCore.lean:556:30: This simp argument is unused:
+  hq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hm, hq', hty]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCore.lean:557:21: This simp argument is unused:
+  hm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hq', hq, hty]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCore.lean:557:25: This simp argument is unused:
+  hq'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hm, hq, hty]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCore.lean:557:30: This simp argument is unused:
+  hq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hm, hq', hty]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCore.lean:560:21: This simp argument is unused:
+  hm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hq', hq, hswitch]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCore.lean:560:25: This simp argument is unused:
+  hq'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hm, hq, hswitch]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCore.lean:560:30: This simp argument is unused:
+  hq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hm, hq', hswitch]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCore.lean:562:23: This simp argument is unused:
+  hm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hq', hq, hswitch, hty]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCore.lean:562:27: This simp argument is unused:
+  hq'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hm, hq, hswitch, hty]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCore.lean:562:32: This simp argument is unused:
+  hq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hm, hq', hswitch, hty]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCore.lean:562:36: This simp argument is unused:
+  hswitch
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hm, hq', hq, hty]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCore.lean:565:25: This simp argument is unused:
+  hm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hq', hq, hswitch, hty, hd]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCore.lean:565:29: This simp argument is unused:
+  hq'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hm, hq, hswitch, hty, hd]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCore.lean:565:34: This simp argument is unused:
+  hq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hm, hq', hswitch, hty, hd]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCore.lean:565:38: This simp argument is unused:
+  hswitch
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hm, hq', hq, hty, hd]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCore.lean:569:16: This simp argument is unused:
+  t
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hm, hq', hq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCore.lean:569:19: This simp argument is unused:
+  hm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hq', hq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCore.lean:569:23: This simp argument is unused:
+  hq'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hm, hq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCore.lean:569:28: This simp argument is unused:
+  hq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hm, hq']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCore.lean:571:16: This simp argument is unused:
+  t
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hm, hq', hq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCore.lean:571:19: This simp argument is unused:
+  hm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hq', hq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCore.lean:571:23: This simp argument is unused:
+  hq'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hm, hq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCore.lean:571:28: This simp argument is unused:
+  hq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hm, hq']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCore.lean:605:6: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: TrafficShaping/ExecutionCore.lean:613:50: Variable name `hm` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hm
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8715/8723] Replayed TrafficShaping.ExecutionBudget
+warning: TrafficShaping/ExecutionBudget.lean:11:48: Variable name `hmb` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hmb
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8716/8723] Replayed TrafficShaping.ExecutionCausality
+warning: TrafficShaping/ExecutionCausality.lean:96:21: This simp argument is unused:
+  hm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hq', hq, hty]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCausality.lean:96:25: This simp argument is unused:
+  hq'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hm, hq, hty]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCausality.lean:96:30: This simp argument is unused:
+  hq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hm, hq', hty]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCausality.lean:97:21: This simp argument is unused:
+  hm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hq', hq, hty]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCausality.lean:97:25: This simp argument is unused:
+  hq'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hm, hq, hty]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCausality.lean:97:30: This simp argument is unused:
+  hq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hm, hq', hty]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCausality.lean:100:21: This simp argument is unused:
+  hm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hq', hq, hswitch]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCausality.lean:100:25: This simp argument is unused:
+  hq'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hm, hq, hswitch]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCausality.lean:100:30: This simp argument is unused:
+  hq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hm, hq', hswitch]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCausality.lean:102:23: This simp argument is unused:
+  hm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hq', hq, hswitch, hty]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCausality.lean:102:27: This simp argument is unused:
+  hq'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hm, hq, hswitch, hty]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCausality.lean:102:32: This simp argument is unused:
+  hq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hm, hq', hswitch, hty]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCausality.lean:102:36: This simp argument is unused:
+  hswitch
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hm, hq', hq, hty]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCausality.lean:105:25: This simp argument is unused:
+  hm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hq', hq, hswitch, hty, hd]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCausality.lean:105:29: This simp argument is unused:
+  hq'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hm, hq, hswitch, hty, hd]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCausality.lean:105:34: This simp argument is unused:
+  hq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hm, hq', hswitch, hty, hd]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCausality.lean:105:38: This simp argument is unused:
+  hswitch
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hm, hq', hq, hty, hd]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCausality.lean:109:16: This simp argument is unused:
+  t
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hm, hq', hq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCausality.lean:109:19: This simp argument is unused:
+  hm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hq', hq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCausality.lean:109:23: This simp argument is unused:
+  hq'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hm, hq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCausality.lean:109:28: This simp argument is unused:
+  hq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hm, hq']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCausality.lean:111:16: This simp argument is unused:
+  t
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hm, hq', hq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCausality.lean:111:19: This simp argument is unused:
+  hm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hq', hq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCausality.lean:111:23: This simp argument is unused:
+  hq'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hm, hq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCausality.lean:111:28: This simp argument is unused:
+  hq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, hm, hq']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionCausality.lean:117:15: This simp argument is unused:
+  Fin.val_mk
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [8717/8723] Replayed TrafficShaping.Execution
+warning: TrafficShaping/Execution.lean:14:36: Variable name `ha` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _ha
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8718/8723] Replayed TrafficShaping.ExecutionDelivery
+warning: TrafficShaping/ExecutionDelivery.lean:121:46: Variable name `hm` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hm
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: TrafficShaping/ExecutionDelivery.lean:143:36: This simp argument is unused:
+  hq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [step, t, hmde, hqdef, hq', ht]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionDelivery.lean:146:40: This simp argument is unused:
+  ht
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [step, t, hmde, hqdef, hq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionDelivery.lean:148:36: This simp argument is unused:
+  hq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [step, t, hmde, hqdef, hq', ht]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: TrafficShaping/ExecutionDelivery.lean:148:45: This simp argument is unused:
+  ht
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [step, t, hmde, hqdef, hq, hq']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [8719/8723] Replayed TrafficShaping.ExecutionPreservation
+warning: TrafficShaping/ExecutionPreservation.lean:63:26: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: TrafficShaping/ExecutionPreservation.lean:76:56: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: TrafficShaping/ExecutionPreservation.lean:100:43: Variable name `hn` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hn
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: TrafficShaping/ExecutionPreservation.lean:118:41: Variable name `hn` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hn
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: TrafficShaping/ExecutionPreservation.lean:136:50: Variable name `hn` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hn
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: TrafficShaping/ExecutionPreservation.lean:175:2: Try `simp at hamem` instead of `simpa using hamem`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: TrafficShaping/ExecutionPreservation.lean:199:52: Variable name `hn` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hn
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: TrafficShaping/ExecutionPreservation.lean:268:41: Variable name `hn` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hn
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: TrafficShaping/ExecutionPreservation.lean:273:40: Variable name `D` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _D
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: TrafficShaping/ExecutionPreservation.lean:313:19: Variable name `ht` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _ht
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: TrafficShaping/ExecutionPreservation.lean:330:5: Variable name `hn` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hn
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8720/8723] Built TrafficShaping.OnAchievability (31s)
+warning: TrafficShaping/OnAchievability.lean:77:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: TrafficShaping/OnAchievability.lean:78:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [8721/8723] Built TrafficShaping.MainTheorem (5.3s)
+warning: TrafficShaping/MainTheorem.lean:51:59: Variable name `hB` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hB
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: TrafficShaping/MainTheorem.lean:56:58: Variable name `hmb` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hmb
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: TrafficShaping/MainTheorem.lean:57:5: Variable name `hB` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hB
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: TrafficShaping/MainTheorem.lean:64:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: TrafficShaping/MainTheorem.lean:65:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: TrafficShaping/MainTheorem.lean:73:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: TrafficShaping/MainTheorem.lean:74:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: TrafficShaping/MainTheorem.lean:85:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: TrafficShaping/MainTheorem.lean:86:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: TrafficShaping/MainTheorem.lean:112:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: TrafficShaping/MainTheorem.lean:113:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [8722/8723] Built TrafficShaping (8.2s)
+Build completed successfully (8723 jobs).

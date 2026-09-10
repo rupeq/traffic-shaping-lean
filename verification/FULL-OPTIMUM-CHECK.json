@@ -1,0 +1,144 @@
+{
+  "commands": [
+    {
+      "command": [
+        "/private/tmp/lean-4.33.1-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "--version"
+      ],
+      "cwd": "formal",
+      "exit_code": 0,
+      "name": "lean_version"
+    },
+    {
+      "command": [
+        "/private/tmp/lean-4.33.1-darwin_aarch64/bin/lake",
+        "build"
+      ],
+      "cwd": "formal",
+      "exit_code": 0,
+      "name": "lake_build"
+    },
+    {
+      "command": [
+        "/private/tmp/lean-4.33.1-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "Audit.lean"
+      ],
+      "cwd": "formal",
+      "exit_code": 0,
+      "name": "audit_axioms"
+    },
+    {
+      "command": [
+        "/Users/artem.derevago/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        ".github/scripts/audit_formal.py",
+        "--formal-root",
+        "formal",
+        "--audit-file",
+        "formal/Audit.lean",
+        "--axiom-output",
+        "/Users/artem.derevago/master_thesis/traffic-shaping-lean/verification/full-optimum-axioms.log"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "name": "formal_audit"
+    }
+  ],
+  "created_at_utc": "2026-09-10T21:33:57.935979+00:00",
+  "exitCodes": {
+    "audit_axioms": 0,
+    "formal_audit": 0,
+    "lake_build": 0,
+    "lean_version": 0,
+    "preflight": 0
+  },
+  "full_optimality_proof_complete": true,
+  "reportCounts": {
+    "audit_commands": 29,
+    "kernel_axiom_reports": 29
+  },
+  "source_sha256": {
+    "formal/Audit.lean": "7ff9140922f4a6ba590ade7da2007a7314c36ea8371ea46e09ceba543b58b12c",
+    "formal/TrafficShaping.lean": "3535715c1a0871cbc6a62af4219948103415343b61f00b00c19a5dae82eccd50",
+    "formal/TrafficShaping/Achievability.lean": "51389e552911521759de30d4b920fcbcaaea3964d8659d6c082c98c3374058b0",
+    "formal/TrafficShaping/Converse.lean": "488f4d0f7bb97101d93a015923b5bd156e90a7112926a39ee660874609811fd3",
+    "formal/TrafficShaping/Execution.lean": "5374a54690bee7fed47af337f1b4664f91bb4dac6ee6b5aeb437b1e05d0989f1",
+    "formal/TrafficShaping/ExecutionBudget.lean": "5ad3bfc8fcfe1c883ab9760d7ef3795ac1f518abe004b9ab163e89837074bb6c",
+    "formal/TrafficShaping/ExecutionCausality.lean": "63af9322394e0da2d2f06f66535786a7f732d3e745a838dfa32dc41002eadf53",
+    "formal/TrafficShaping/ExecutionCore.lean": "a4612162373ac2dd89817e52fb678c04c024c398ad2bb234c16d578695660931",
+    "formal/TrafficShaping/ExecutionDelivery.lean": "e82c58dc12660eb1f8b61437ede9d17e355b630163f30f0da5deaa65c0b46eff",
+    "formal/TrafficShaping/ExecutionPreservation.lean": "fa5eb672099038426b9d49680642a13b26ba229c936b77b481da65808216923d",
+    "formal/TrafficShaping/Game.lean": "5a9480ef991557757cc05bc6716667b6e5915291cf6c6aae3b501d6dc7627219",
+    "formal/TrafficShaping/Law.lean": "589f17f5ea7c5a8fc03b9318ddd587de26ed0752f8cabdaf63eaa3ac271ef20a",
+    "formal/TrafficShaping/MainTheorem.lean": "461b38324845cf10c8b341e554d64180f9b482d4ddbf8d061459a5db51b385a4",
+    "formal/TrafficShaping/Matching.lean": "73d0d2b27f8fb8a67e23ab3f01d1d065959b9b3efcc9ab4d420dc6e7ed523886",
+    "formal/TrafficShaping/Mechanism.lean": "db83ebfde4cc45fc5829d7b0c505b7c0246147bed4d6609051eb7b81675e0c68",
+    "formal/TrafficShaping/Model.lean": "c9d1cd2be55c5fa376748488b0944b05544aff5d90d16981638381558a4d9234",
+    "formal/TrafficShaping/OnAchievability.lean": "ac6ae97bffcd5555ee435ee207985771107fe16b4b66b70547769938fc8f8b13",
+    "formal/TrafficShaping/Saturation.lean": "4ed47107d569232bd5f6b33749f17478717297ff30c6b4cf2243d579447bceba",
+    "formal/lake-manifest.json": "dbbab0b18d7196198928c634a441be22a3d55832a6425c45c8496b024f7499be",
+    "formal/lakefile.toml": "f9cff278e7f3445516926253841906c63c7194624dea266b393fb4d0d13361a5",
+    "formal/lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+  },
+  "source_sha256_after": {
+    "formal/Audit.lean": "7ff9140922f4a6ba590ade7da2007a7314c36ea8371ea46e09ceba543b58b12c",
+    "formal/TrafficShaping.lean": "3535715c1a0871cbc6a62af4219948103415343b61f00b00c19a5dae82eccd50",
+    "formal/TrafficShaping/Achievability.lean": "51389e552911521759de30d4b920fcbcaaea3964d8659d6c082c98c3374058b0",
+    "formal/TrafficShaping/Converse.lean": "488f4d0f7bb97101d93a015923b5bd156e90a7112926a39ee660874609811fd3",
+    "formal/TrafficShaping/Execution.lean": "5374a54690bee7fed47af337f1b4664f91bb4dac6ee6b5aeb437b1e05d0989f1",
+    "formal/TrafficShaping/ExecutionBudget.lean": "5ad3bfc8fcfe1c883ab9760d7ef3795ac1f518abe004b9ab163e89837074bb6c",
+    "formal/TrafficShaping/ExecutionCausality.lean": "63af9322394e0da2d2f06f66535786a7f732d3e745a838dfa32dc41002eadf53",
+    "formal/TrafficShaping/ExecutionCore.lean": "a4612162373ac2dd89817e52fb678c04c024c398ad2bb234c16d578695660931",
+    "formal/TrafficShaping/ExecutionDelivery.lean": "e82c58dc12660eb1f8b61437ede9d17e355b630163f30f0da5deaa65c0b46eff",
+    "formal/TrafficShaping/ExecutionPreservation.lean": "fa5eb672099038426b9d49680642a13b26ba229c936b77b481da65808216923d",
+    "formal/TrafficShaping/Game.lean": "5a9480ef991557757cc05bc6716667b6e5915291cf6c6aae3b501d6dc7627219",
+    "formal/TrafficShaping/Law.lean": "589f17f5ea7c5a8fc03b9318ddd587de26ed0752f8cabdaf63eaa3ac271ef20a",
+    "formal/TrafficShaping/MainTheorem.lean": "461b38324845cf10c8b341e554d64180f9b482d4ddbf8d061459a5db51b385a4",
+    "formal/TrafficShaping/Matching.lean": "73d0d2b27f8fb8a67e23ab3f01d1d065959b9b3efcc9ab4d420dc6e7ed523886",
+    "formal/TrafficShaping/Mechanism.lean": "db83ebfde4cc45fc5829d7b0c505b7c0246147bed4d6609051eb7b81675e0c68",
+    "formal/TrafficShaping/Model.lean": "c9d1cd2be55c5fa376748488b0944b05544aff5d90d16981638381558a4d9234",
+    "formal/TrafficShaping/OnAchievability.lean": "ac6ae97bffcd5555ee435ee207985771107fe16b4b66b70547769938fc8f8b13",
+    "formal/TrafficShaping/Saturation.lean": "4ed47107d569232bd5f6b33749f17478717297ff30c6b4cf2243d579447bceba",
+    "formal/lake-manifest.json": "dbbab0b18d7196198928c634a441be22a3d55832a6425c45c8496b024f7499be",
+    "formal/lakefile.toml": "f9cff278e7f3445516926253841906c63c7194624dea266b393fb4d0d13361a5",
+    "formal/lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+  },
+  "source_sha256_before": {
+    "formal/Audit.lean": "7ff9140922f4a6ba590ade7da2007a7314c36ea8371ea46e09ceba543b58b12c",
+    "formal/TrafficShaping.lean": "3535715c1a0871cbc6a62af4219948103415343b61f00b00c19a5dae82eccd50",
+    "formal/TrafficShaping/Achievability.lean": "51389e552911521759de30d4b920fcbcaaea3964d8659d6c082c98c3374058b0",
+    "formal/TrafficShaping/Converse.lean": "488f4d0f7bb97101d93a015923b5bd156e90a7112926a39ee660874609811fd3",
+    "formal/TrafficShaping/Execution.lean": "5374a54690bee7fed47af337f1b4664f91bb4dac6ee6b5aeb437b1e05d0989f1",
+    "formal/TrafficShaping/ExecutionBudget.lean": "5ad3bfc8fcfe1c883ab9760d7ef3795ac1f518abe004b9ab163e89837074bb6c",
+    "formal/TrafficShaping/ExecutionCausality.lean": "63af9322394e0da2d2f06f66535786a7f732d3e745a838dfa32dc41002eadf53",
+    "formal/TrafficShaping/ExecutionCore.lean": "a4612162373ac2dd89817e52fb678c04c024c398ad2bb234c16d578695660931",
+    "formal/TrafficShaping/ExecutionDelivery.lean": "e82c58dc12660eb1f8b61437ede9d17e355b630163f30f0da5deaa65c0b46eff",
+    "formal/TrafficShaping/ExecutionPreservation.lean": "fa5eb672099038426b9d49680642a13b26ba229c936b77b481da65808216923d",
+    "formal/TrafficShaping/Game.lean": "5a9480ef991557757cc05bc6716667b6e5915291cf6c6aae3b501d6dc7627219",
+    "formal/TrafficShaping/Law.lean": "589f17f5ea7c5a8fc03b9318ddd587de26ed0752f8cabdaf63eaa3ac271ef20a",
+    "formal/TrafficShaping/MainTheorem.lean": "461b38324845cf10c8b341e554d64180f9b482d4ddbf8d061459a5db51b385a4",
+    "formal/TrafficShaping/Matching.lean": "73d0d2b27f8fb8a67e23ab3f01d1d065959b9b3efcc9ab4d420dc6e7ed523886",
+    "formal/TrafficShaping/Mechanism.lean": "db83ebfde4cc45fc5829d7b0c505b7c0246147bed4d6609051eb7b81675e0c68",
+    "formal/TrafficShaping/Model.lean": "c9d1cd2be55c5fa376748488b0944b05544aff5d90d16981638381558a4d9234",
+    "formal/TrafficShaping/OnAchievability.lean": "ac6ae97bffcd5555ee435ee207985771107fe16b4b66b70547769938fc8f8b13",
+    "formal/TrafficShaping/Saturation.lean": "4ed47107d569232bd5f6b33749f17478717297ff30c6b4cf2243d579447bceba",
+    "formal/lake-manifest.json": "dbbab0b18d7196198928c634a441be22a3d55832a6425c45c8496b024f7499be",
+    "formal/lakefile.toml": "f9cff278e7f3445516926253841906c63c7194624dea266b393fb4d0d13361a5",
+    "formal/lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+  },
+  "source_unchanged": true,
+  "status": "PASS",
+  "toolchain": {
+    "actual_lean_version": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+    "declared_toolchain": "leanprover/lean4:v4.33.1",
+    "lake": "/private/tmp/lean-4.33.1-darwin_aarch64/bin/lake",
+    "lean_toolchain_pinned": true,
+    "lean_version_matches": true,
+    "mathlib_input_revision": "v4.33.1",
+    "mathlib_manifest_pinned": true,
+    "mathlib_revision": "0df444a360eaa60ab8c11dca51a86af692955474"
+  }
+}

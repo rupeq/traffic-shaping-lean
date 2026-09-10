@@ -1,0 +1,31 @@
+import TrafficShaping
+
+#print axioms TrafficShaping.Law.repair_tv_identity
+#print axioms TrafficShaping.value_attained
+#print axioms TrafficShaping.greedy_true_iff_feasible
+#print axioms TrafficShaping.terminal_subset_of_feasible
+#print axioms TrafficShaping.noncausal_converse_bound
+#print axioms TrafficShaping.causal_converse_bound
+#print axioms TrafficShaping.repairMechanism_tv
+#print axioms TrafficShaping.input_coverage_lower
+#print axioms TrafficShaping.executeState_servedFeasible
+#print axioms TrafficShaping.executeState_queue_empty
+#print axioms TrafficShaping.executeState_served_eq
+#print axioms TrafficShaping.execute_cap
+#print axioms TrafficShaping.execute_causal
+#print axioms TrafficShaping.execute_empty
+#print axioms TrafficShaping.execute_eq_of_feasible
+#print axioms TrafficShaping.onRepair_feasible
+#print axioms TrafficShaping.onMechanism_causal
+#print axioms TrafficShaping.onMechanism_tv
+#print axioms TrafficShaping.onMechanism_private
+#print axioms TrafficShaping.causal_attainment
+#print axioms TrafficShaping.noncausal_attainment
+#print axioms TrafficShaping.noncausal_optimum_isLeast
+#print axioms TrafficShaping.causal_optimum_isLeast
+#print axioms TrafficShaping.noncausal_optimum_eq
+#print axioms TrafficShaping.causal_optimum_eq
+#print axioms TrafficShaping.noncausal_optimum_epsilon_independent
+#print axioms TrafficShaping.causal_optimum_epsilon_independent
+#print axioms TrafficShaping.both_optima_attained_at_zero
+#print axioms TrafficShaping.mechanism_impossible_of_budget_lt
