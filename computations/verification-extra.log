@@ -1,0 +1,30 @@
+R4 extra-certificate verification
+
+Generation command:
+PYTHONPATH=/private/tmp/manuscript-science-packages /Users/artem.derevago/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 regenerate_extra.py
+
+The stored original eight reports were preserved and independently rechecked.
+Only the eight added LPs were freshly solved.  Solve plus independent-check
+times for the added records were below the two-minute per-instance limit:
+
+  (10,1,3,7) offline 0.025 s, causal 0.009 s
+  (12,2,3,7) offline 0.253 s, causal 0.041 s
+  (12,1,4,9) offline 0.171 s, causal 0.049 s
+  (14,2,4,9) offline 3.127 s, causal 0.385 s
+
+Added exact values (delta_off, delta_on):
+  (10,1,3,7): (1/3, 1/2)
+  (12,2,3,7): (1/3, 1/2)
+  (12,1,4,9): (2/5, 2/3)
+  (14,2,4,9): (2/5, 2/3)
+
+Verifier command (Python standard library only):
+/Users/artem.derevago/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 -S verify_extra.py
+
+Verifier result:
+16 stored certificates verified (8 original + 8 added); 4,736 primal rows
+and 4,024 dual columns checked; EXTRA-CERTIFICATE-CHECK.json written.
+
+The four added rows all have delta_on<1 and positive causal coverage.  These
+are finite examples, not scalability benchmarks.  Scope guard: this run did
+not run the earlier 79 LPs or the full old certificate check.

@@ -1,0 +1,1338 @@
+{
+  "status": "PASS",
+  "checker": "run_checks.py",
+  "created_at_utc": "2026-09-10T20:25:35.795168+00:00",
+  "source_directory": "/Users/artem.derevago/master_thesis/traffic-shaping-lean/computations",
+  "output_directory": "/private/tmp/traffic-shaping-computations-full-r5-final",
+  "python_executable": "/Users/artem.derevago/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "source_previous_pass_logs_used": false,
+  "source_unchanged": true,
+  "clean_copy": true,
+  "positive_certificate_counts": {
+    "legacy_certificates": 79,
+    "r4_extra_certificates": 16,
+    "certificates": 95,
+    "primal_rows": 10356,
+    "dual_columns": 39931
+  },
+  "standard_checks": {
+    "commands": {
+      "legacy_certificates": {
+        "command": [
+          "/private/tmp/traffic-shaping-computations-venv-check/bin/python",
+          "-S",
+          "independent_certificate_check.py"
+        ],
+        "seconds": 0.7942737909615971
+      },
+      "extra_certificates": {
+        "command": [
+          "/private/tmp/traffic-shaping-computations-venv-check/bin/python",
+          "-S",
+          "verify_extra.py"
+        ],
+        "seconds": 0.11802583403186873
+      },
+      "fallback": {
+        "command": [
+          "/private/tmp/traffic-shaping-computations-venv-check/bin/python",
+          "-S",
+          "fallback_check.py"
+        ],
+        "seconds": 0.3711666670278646
+      },
+      "zero-delay": {
+        "command": [
+          "/private/tmp/traffic-shaping-computations-venv-check/bin/python",
+          "-S",
+          "zero_delay_independent_check.py"
+        ],
+        "seconds": 0.04504462500335649
+      },
+      "no-savings": {
+        "command": [
+          "/private/tmp/traffic-shaping-computations-venv-check/bin/python",
+          "-S",
+          "no_savings_check.py"
+        ],
+        "seconds": 2.597304750001058
+      }
+    },
+    "legacy_certificate_report": {
+      "checker": "Independent augmenting-path matching and exact Fraction arithmetic",
+      "optimizer_imported": false,
+      "certificates": 79,
+      "explicit_example": {
+        "H": 8,
+        "D": 1,
+        "m": 2,
+        "B": 4,
+        "causal": true,
+        "delta": "2/3"
+      },
+      "example_matrix_rows": 28,
+      "example_matrix_columns": 15,
+      "all_passed": true,
+      "table": [
+        {
+          "H": 8,
+          "D": 1,
+          "m": 2,
+          "B0": 6,
+          "least_positive_delta": "1/2",
+          "B_on_01": 6,
+          "B_on_05": 5
+        },
+        {
+          "H": 8,
+          "D": 2,
+          "m": 2,
+          "B0": 4,
+          "least_positive_delta": "1",
+          "B_on_01": 4,
+          "B_on_05": 4
+        },
+        {
+          "H": 8,
+          "D": 3,
+          "m": 2,
+          "B0": 4,
+          "least_positive_delta": "1",
+          "B_on_01": 4,
+          "B_on_05": 4
+        },
+        {
+          "H": 12,
+          "D": 1,
+          "m": 2,
+          "B0": 8,
+          "least_positive_delta": "1/3",
+          "B_on_01": 8,
+          "B_on_05": 7
+        },
+        {
+          "H": 12,
+          "D": 2,
+          "m": 2,
+          "B0": 6,
+          "least_positive_delta": "1/2",
+          "B_on_01": 6,
+          "B_on_05": 5
+        },
+        {
+          "H": 12,
+          "D": 3,
+          "m": 2,
+          "B0": 6,
+          "least_positive_delta": "1/2",
+          "B_on_01": 6,
+          "B_on_05": 5
+        },
+        {
+          "H": 16,
+          "D": 1,
+          "m": 2,
+          "B0": 11,
+          "least_positive_delta": "2/9",
+          "B_on_01": 11,
+          "B_on_05": 8
+        },
+        {
+          "H": 16,
+          "D": 2,
+          "m": 2,
+          "B0": 8,
+          "least_positive_delta": "1/3",
+          "B_on_01": 8,
+          "B_on_05": 7
+        },
+        {
+          "H": 16,
+          "D": 3,
+          "m": 2,
+          "B0": 7,
+          "least_positive_delta": "2/5",
+          "B_on_01": 7,
+          "B_on_05": 6
+        }
+      ],
+      "records": [
+        {
+          "H": 8,
+          "D": 1,
+          "m": 2,
+          "B": 2,
+          "causal": false,
+          "delta": "9/10"
+        },
+        {
+          "H": 8,
+          "D": 1,
+          "m": 2,
+          "B": 3,
+          "causal": false,
+          "delta": "7/10"
+        },
+        {
+          "H": 8,
+          "D": 1,
+          "m": 2,
+          "B": 4,
+          "causal": false,
+          "delta": "4/9"
+        },
+        {
+          "H": 8,
+          "D": 1,
+          "m": 2,
+          "B": 5,
+          "causal": false,
+          "delta": "1/3"
+        },
+        {
+          "H": 8,
+          "D": 1,
+          "m": 2,
+          "B": 6,
+          "causal": false,
+          "delta": "0"
+        },
+        {
+          "H": 8,
+          "D": 1,
+          "m": 2,
+          "B": 2,
+          "causal": true,
+          "delta": "1"
+        },
+        {
+          "H": 8,
+          "D": 1,
+          "m": 2,
+          "B": 3,
+          "causal": true,
+          "delta": "1"
+        },
+        {
+          "H": 8,
+          "D": 1,
+          "m": 2,
+          "B": 4,
+          "causal": true,
+          "delta": "2/3"
+        },
+        {
+          "H": 8,
+          "D": 1,
+          "m": 2,
+          "B": 5,
+          "causal": true,
+          "delta": "1/2"
+        },
+        {
+          "H": 8,
+          "D": 1,
+          "m": 2,
+          "B": 6,
+          "causal": true,
+          "delta": "0"
+        },
+        {
+          "H": 8,
+          "D": 2,
+          "m": 2,
+          "B": 2,
+          "causal": false,
+          "delta": "5/6"
+        },
+        {
+          "H": 8,
+          "D": 2,
+          "m": 2,
+          "B": 3,
+          "causal": false,
+          "delta": "1/2"
+        },
+        {
+          "H": 8,
+          "D": 2,
+          "m": 2,
+          "B": 4,
+          "causal": false,
+          "delta": "0"
+        },
+        {
+          "H": 8,
+          "D": 2,
+          "m": 2,
+          "B": 2,
+          "causal": true,
+          "delta": "1"
+        },
+        {
+          "H": 8,
+          "D": 2,
+          "m": 2,
+          "B": 3,
+          "causal": true,
+          "delta": "1"
+        },
+        {
+          "H": 8,
+          "D": 2,
+          "m": 2,
+          "B": 4,
+          "causal": true,
+          "delta": "0"
+        },
+        {
+          "H": 8,
+          "D": 3,
+          "m": 2,
+          "B": 2,
+          "causal": false,
+          "delta": "2/3"
+        },
+        {
+          "H": 8,
+          "D": 3,
+          "m": 2,
+          "B": 3,
+          "causal": false,
+          "delta": "1/2"
+        },
+        {
+          "H": 8,
+          "D": 3,
+          "m": 2,
+          "B": 4,
+          "causal": false,
+          "delta": "0"
+        },
+        {
+          "H": 8,
+          "D": 3,
+          "m": 2,
+          "B": 2,
+          "causal": true,
+          "delta": "1"
+        },
+        {
+          "H": 8,
+          "D": 3,
+          "m": 2,
+          "B": 3,
+          "causal": true,
+          "delta": "1"
+        },
+        {
+          "H": 8,
+          "D": 3,
+          "m": 2,
+          "B": 4,
+          "causal": true,
+          "delta": "0"
+        },
+        {
+          "H": 12,
+          "D": 1,
+          "m": 2,
+          "B": 2,
+          "causal": false,
+          "delta": "20/21"
+        },
+        {
+          "H": 12,
+          "D": 1,
+          "m": 2,
+          "B": 3,
+          "causal": false,
+          "delta": "6/7"
+        },
+        {
+          "H": 12,
+          "D": 1,
+          "m": 2,
+          "B": 4,
+          "causal": false,
+          "delta": "627/872"
+        },
+        {
+          "H": 12,
+          "D": 1,
+          "m": 2,
+          "B": 5,
+          "causal": false,
+          "delta": "65/114"
+        },
+        {
+          "H": 12,
+          "D": 1,
+          "m": 2,
+          "B": 6,
+          "causal": false,
+          "delta": "13/32"
+        },
+        {
+          "H": 12,
+          "D": 1,
+          "m": 2,
+          "B": 7,
+          "causal": false,
+          "delta": "1/4"
+        },
+        {
+          "H": 12,
+          "D": 1,
+          "m": 2,
+          "B": 8,
+          "causal": false,
+          "delta": "0"
+        },
+        {
+          "H": 12,
+          "D": 1,
+          "m": 2,
+          "B": 2,
+          "causal": true,
+          "delta": "1"
+        },
+        {
+          "H": 12,
+          "D": 1,
+          "m": 2,
+          "B": 3,
+          "causal": true,
+          "delta": "1"
+        },
+        {
+          "H": 12,
+          "D": 1,
+          "m": 2,
+          "B": 4,
+          "causal": true,
+          "delta": "9/10"
+        },
+        {
+          "H": 12,
+          "D": 1,
+          "m": 2,
+          "B": 5,
+          "causal": true,
+          "delta": "3/4"
+        },
+        {
+          "H": 12,
+          "D": 1,
+          "m": 2,
+          "B": 6,
+          "causal": true,
+          "delta": "6/11"
+        },
+        {
+          "H": 12,
+          "D": 1,
+          "m": 2,
+          "B": 7,
+          "causal": true,
+          "delta": "1/3"
+        },
+        {
+          "H": 12,
+          "D": 1,
+          "m": 2,
+          "B": 8,
+          "causal": true,
+          "delta": "0"
+        },
+        {
+          "H": 12,
+          "D": 2,
+          "m": 2,
+          "B": 2,
+          "causal": false,
+          "delta": "9/10"
+        },
+        {
+          "H": 12,
+          "D": 2,
+          "m": 2,
+          "B": 3,
+          "causal": false,
+          "delta": "3/4"
+        },
+        {
+          "H": 12,
+          "D": 2,
+          "m": 2,
+          "B": 4,
+          "causal": false,
+          "delta": "6/11"
+        },
+        {
+          "H": 12,
+          "D": 2,
+          "m": 2,
+          "B": 5,
+          "causal": false,
+          "delta": "1/3"
+        },
+        {
+          "H": 12,
+          "D": 2,
+          "m": 2,
+          "B": 6,
+          "causal": false,
+          "delta": "0"
+        },
+        {
+          "H": 12,
+          "D": 2,
+          "m": 2,
+          "B": 2,
+          "causal": true,
+          "delta": "1"
+        },
+        {
+          "H": 12,
+          "D": 2,
+          "m": 2,
+          "B": 3,
+          "causal": true,
+          "delta": "1"
+        },
+        {
+          "H": 12,
+          "D": 2,
+          "m": 2,
+          "B": 4,
+          "causal": true,
+          "delta": "5/6"
+        },
+        {
+          "H": 12,
+          "D": 2,
+          "m": 2,
+          "B": 5,
+          "causal": true,
+          "delta": "1/2"
+        },
+        {
+          "H": 12,
+          "D": 2,
+          "m": 2,
+          "B": 6,
+          "causal": true,
+          "delta": "0"
+        },
+        {
+          "H": 12,
+          "D": 3,
+          "m": 2,
+          "B": 2,
+          "causal": false,
+          "delta": "5/6"
+        },
+        {
+          "H": 12,
+          "D": 3,
+          "m": 2,
+          "B": 3,
+          "causal": false,
+          "delta": "2/3"
+        },
+        {
+          "H": 12,
+          "D": 3,
+          "m": 2,
+          "B": 4,
+          "causal": false,
+          "delta": "4/9"
+        },
+        {
+          "H": 12,
+          "D": 3,
+          "m": 2,
+          "B": 5,
+          "causal": false,
+          "delta": "1/3"
+        },
+        {
+          "H": 12,
+          "D": 3,
+          "m": 2,
+          "B": 6,
+          "causal": false,
+          "delta": "0"
+        },
+        {
+          "H": 12,
+          "D": 3,
+          "m": 2,
+          "B": 2,
+          "causal": true,
+          "delta": "1"
+        },
+        {
+          "H": 12,
+          "D": 3,
+          "m": 2,
+          "B": 3,
+          "causal": true,
+          "delta": "1"
+        },
+        {
+          "H": 12,
+          "D": 3,
+          "m": 2,
+          "B": 4,
+          "causal": true,
+          "delta": "2/3"
+        },
+        {
+          "H": 12,
+          "D": 3,
+          "m": 2,
+          "B": 5,
+          "causal": true,
+          "delta": "1/2"
+        },
+        {
+          "H": 12,
+          "D": 3,
+          "m": 2,
+          "B": 6,
+          "causal": true,
+          "delta": "0"
+        },
+        {
+          "H": 16,
+          "D": 1,
+          "m": 2,
+          "B": 2,
+          "causal": true,
+          "delta": "1"
+        },
+        {
+          "H": 16,
+          "D": 1,
+          "m": 2,
+          "B": 3,
+          "causal": true,
+          "delta": "1"
+        },
+        {
+          "H": 16,
+          "D": 1,
+          "m": 2,
+          "B": 4,
+          "causal": true,
+          "delta": "20/21"
+        },
+        {
+          "H": 16,
+          "D": 1,
+          "m": 2,
+          "B": 5,
+          "causal": true,
+          "delta": "27/31"
+        },
+        {
+          "H": 16,
+          "D": 1,
+          "m": 2,
+          "B": 6,
+          "causal": true,
+          "delta": "12277/16216"
+        },
+        {
+          "H": 16,
+          "D": 1,
+          "m": 2,
+          "B": 7,
+          "causal": true,
+          "delta": "1164/1873"
+        },
+        {
+          "H": 16,
+          "D": 1,
+          "m": 2,
+          "B": 8,
+          "causal": true,
+          "delta": "71/149"
+        },
+        {
+          "H": 16,
+          "D": 1,
+          "m": 2,
+          "B": 9,
+          "causal": true,
+          "delta": "8/23"
+        },
+        {
+          "H": 16,
+          "D": 1,
+          "m": 2,
+          "B": 10,
+          "causal": true,
+          "delta": "2/9"
+        },
+        {
+          "H": 16,
+          "D": 1,
+          "m": 2,
+          "B": 11,
+          "causal": true,
+          "delta": "0"
+        },
+        {
+          "H": 16,
+          "D": 2,
+          "m": 2,
+          "B": 2,
+          "causal": true,
+          "delta": "1"
+        },
+        {
+          "H": 16,
+          "D": 2,
+          "m": 2,
+          "B": 3,
+          "causal": true,
+          "delta": "1"
+        },
+        {
+          "H": 16,
+          "D": 2,
+          "m": 2,
+          "B": 4,
+          "causal": true,
+          "delta": "9/10"
+        },
+        {
+          "H": 16,
+          "D": 2,
+          "m": 2,
+          "B": 5,
+          "causal": true,
+          "delta": "3/4"
+        },
+        {
+          "H": 16,
+          "D": 2,
+          "m": 2,
+          "B": 6,
+          "causal": true,
+          "delta": "6/11"
+        },
+        {
+          "H": 16,
+          "D": 2,
+          "m": 2,
+          "B": 7,
+          "causal": true,
+          "delta": "1/3"
+        },
+        {
+          "H": 16,
+          "D": 2,
+          "m": 2,
+          "B": 8,
+          "causal": true,
+          "delta": "0"
+        },
+        {
+          "H": 16,
+          "D": 3,
+          "m": 2,
+          "B": 2,
+          "causal": true,
+          "delta": "1"
+        },
+        {
+          "H": 16,
+          "D": 3,
+          "m": 2,
+          "B": 3,
+          "causal": true,
+          "delta": "1"
+        },
+        {
+          "H": 16,
+          "D": 3,
+          "m": 2,
+          "B": 4,
+          "causal": true,
+          "delta": "5/6"
+        },
+        {
+          "H": 16,
+          "D": 3,
+          "m": 2,
+          "B": 5,
+          "causal": true,
+          "delta": "8/13"
+        },
+        {
+          "H": 16,
+          "D": 3,
+          "m": 2,
+          "B": 6,
+          "causal": true,
+          "delta": "2/5"
+        },
+        {
+          "H": 16,
+          "D": 3,
+          "m": 2,
+          "B": 7,
+          "causal": true,
+          "delta": "0"
+        }
+      ]
+    },
+    "extra_certificate_report": {
+      "checker": "Independent augmenting-path matching and exact Fraction arithmetic",
+      "optimizer_imported": false,
+      "certificates": 16,
+      "original_certificates": 8,
+      "added_certificates": 8,
+      "all_passed": true,
+      "original_primal_rows_checked": 1064,
+      "added_primal_rows_checked": 3672,
+      "primal_rows_checked": 4736,
+      "original_dual_columns_checked": 421,
+      "added_dual_columns_checked": 3603,
+      "dual_columns_checked": 4024,
+      "finite_examples": true,
+      "scalability_benchmark": false,
+      "delta_on_note": "The four added rows all have delta_on<1 and positive causal coverage: 1/2, 1/2, 2/3, and 2/3. The original eight records remain present and are reported separately.",
+      "table_rows": [
+        {
+          "selection": "original",
+          "H": 8,
+          "D": 1,
+          "m": 3,
+          "B": 5,
+          "delta_off": "1/2",
+          "delta_on": "1",
+          "coverage_off": "1/2",
+          "coverage_on": "0",
+          "primal_rows": 56,
+          "offline_columns": 56,
+          "causal_columns": 10,
+          "offline_schedule_support": 6,
+          "causal_schedule_support": 1,
+          "offline_input_support": 2,
+          "causal_input_support": 1
+        },
+        {
+          "selection": "original",
+          "H": 8,
+          "D": 2,
+          "m": 3,
+          "B": 4,
+          "delta_off": "1/2",
+          "delta_on": "1",
+          "coverage_off": "1/2",
+          "coverage_on": "0",
+          "primal_rows": 56,
+          "offline_columns": 70,
+          "causal_columns": 5,
+          "offline_schedule_support": 2,
+          "causal_schedule_support": 1,
+          "offline_input_support": 2,
+          "causal_input_support": 1
+        },
+        {
+          "selection": "original",
+          "H": 10,
+          "D": 1,
+          "m": 4,
+          "B": 7,
+          "delta_off": "1/2",
+          "delta_on": "1",
+          "coverage_off": "1/2",
+          "coverage_on": "0",
+          "primal_rows": 210,
+          "offline_columns": 120,
+          "causal_columns": 20,
+          "offline_schedule_support": 8,
+          "causal_schedule_support": 1,
+          "offline_input_support": 2,
+          "causal_input_support": 1
+        },
+        {
+          "selection": "original",
+          "H": 10,
+          "D": 2,
+          "m": 4,
+          "B": 7,
+          "delta_off": "1/2",
+          "delta_on": "1",
+          "coverage_off": "1/2",
+          "coverage_on": "0",
+          "primal_rows": 210,
+          "offline_columns": 120,
+          "causal_columns": 20,
+          "offline_schedule_support": 4,
+          "causal_schedule_support": 1,
+          "offline_input_support": 2,
+          "causal_input_support": 1
+        },
+        {
+          "selection": "added",
+          "H": 10,
+          "D": 1,
+          "m": 3,
+          "B": 7,
+          "delta_off": "1/3",
+          "delta_on": "1/2",
+          "coverage_off": "2/3",
+          "coverage_on": "1/2",
+          "primal_rows": 120,
+          "offline_columns": 120,
+          "causal_columns": 35,
+          "offline_schedule_support": 3,
+          "causal_schedule_support": 2,
+          "offline_input_support": 3,
+          "causal_input_support": 2
+        },
+        {
+          "selection": "added",
+          "H": 12,
+          "D": 2,
+          "m": 3,
+          "B": 7,
+          "delta_off": "1/3",
+          "delta_on": "1/2",
+          "coverage_off": "2/3",
+          "coverage_on": "1/2",
+          "primal_rows": 220,
+          "offline_columns": 792,
+          "causal_columns": 126,
+          "offline_schedule_support": 3,
+          "causal_schedule_support": 2,
+          "offline_input_support": 3,
+          "causal_input_support": 2
+        },
+        {
+          "selection": "added",
+          "H": 12,
+          "D": 1,
+          "m": 4,
+          "B": 9,
+          "delta_off": "2/5",
+          "delta_on": "2/3",
+          "coverage_off": "3/5",
+          "coverage_on": "1/3",
+          "primal_rows": 495,
+          "offline_columns": 220,
+          "causal_columns": 56,
+          "offline_schedule_support": 10,
+          "causal_schedule_support": 3,
+          "offline_input_support": 4,
+          "causal_input_support": 3
+        },
+        {
+          "selection": "added",
+          "H": 14,
+          "D": 2,
+          "m": 4,
+          "B": 9,
+          "delta_off": "2/5",
+          "delta_on": "2/3",
+          "coverage_off": "3/5",
+          "coverage_on": "1/3",
+          "primal_rows": 1001,
+          "offline_columns": 2002,
+          "causal_columns": 252,
+          "offline_schedule_support": 13,
+          "causal_schedule_support": 3,
+          "offline_input_support": 4,
+          "causal_input_support": 3
+        }
+      ],
+      "records": [
+        {
+          "selection": "original",
+          "H": 8,
+          "D": 1,
+          "m": 3,
+          "B": 5,
+          "causal": false,
+          "delta": "1/2",
+          "coverage": "1/2",
+          "primal_rows": 56,
+          "dual_columns": 56,
+          "schedule_support": 6,
+          "input_support": 2
+        },
+        {
+          "selection": "original",
+          "H": 8,
+          "D": 1,
+          "m": 3,
+          "B": 5,
+          "causal": true,
+          "delta": "1",
+          "coverage": "0",
+          "primal_rows": 56,
+          "dual_columns": 10,
+          "schedule_support": 1,
+          "input_support": 1
+        },
+        {
+          "selection": "original",
+          "H": 8,
+          "D": 2,
+          "m": 3,
+          "B": 4,
+          "causal": false,
+          "delta": "1/2",
+          "coverage": "1/2",
+          "primal_rows": 56,
+          "dual_columns": 70,
+          "schedule_support": 2,
+          "input_support": 2
+        },
+        {
+          "selection": "original",
+          "H": 8,
+          "D": 2,
+          "m": 3,
+          "B": 4,
+          "causal": true,
+          "delta": "1",
+          "coverage": "0",
+          "primal_rows": 56,
+          "dual_columns": 5,
+          "schedule_support": 1,
+          "input_support": 1
+        },
+        {
+          "selection": "original",
+          "H": 10,
+          "D": 1,
+          "m": 4,
+          "B": 7,
+          "causal": false,
+          "delta": "1/2",
+          "coverage": "1/2",
+          "primal_rows": 210,
+          "dual_columns": 120,
+          "schedule_support": 8,
+          "input_support": 2
+        },
+        {
+          "selection": "original",
+          "H": 10,
+          "D": 1,
+          "m": 4,
+          "B": 7,
+          "causal": true,
+          "delta": "1",
+          "coverage": "0",
+          "primal_rows": 210,
+          "dual_columns": 20,
+          "schedule_support": 1,
+          "input_support": 1
+        },
+        {
+          "selection": "original",
+          "H": 10,
+          "D": 2,
+          "m": 4,
+          "B": 7,
+          "causal": false,
+          "delta": "1/2",
+          "coverage": "1/2",
+          "primal_rows": 210,
+          "dual_columns": 120,
+          "schedule_support": 4,
+          "input_support": 2
+        },
+        {
+          "selection": "original",
+          "H": 10,
+          "D": 2,
+          "m": 4,
+          "B": 7,
+          "causal": true,
+          "delta": "1",
+          "coverage": "0",
+          "primal_rows": 210,
+          "dual_columns": 20,
+          "schedule_support": 1,
+          "input_support": 1
+        },
+        {
+          "selection": "added",
+          "H": 10,
+          "D": 1,
+          "m": 3,
+          "B": 7,
+          "causal": false,
+          "delta": "1/3",
+          "coverage": "2/3",
+          "primal_rows": 120,
+          "dual_columns": 120,
+          "schedule_support": 3,
+          "input_support": 3
+        },
+        {
+          "selection": "added",
+          "H": 10,
+          "D": 1,
+          "m": 3,
+          "B": 7,
+          "causal": true,
+          "delta": "1/2",
+          "coverage": "1/2",
+          "primal_rows": 120,
+          "dual_columns": 35,
+          "schedule_support": 2,
+          "input_support": 2
+        },
+        {
+          "selection": "added",
+          "H": 12,
+          "D": 2,
+          "m": 3,
+          "B": 7,
+          "causal": false,
+          "delta": "1/3",
+          "coverage": "2/3",
+          "primal_rows": 220,
+          "dual_columns": 792,
+          "schedule_support": 3,
+          "input_support": 3
+        },
+        {
+          "selection": "added",
+          "H": 12,
+          "D": 2,
+          "m": 3,
+          "B": 7,
+          "causal": true,
+          "delta": "1/2",
+          "coverage": "1/2",
+          "primal_rows": 220,
+          "dual_columns": 126,
+          "schedule_support": 2,
+          "input_support": 2
+        },
+        {
+          "selection": "added",
+          "H": 12,
+          "D": 1,
+          "m": 4,
+          "B": 9,
+          "causal": false,
+          "delta": "2/5",
+          "coverage": "3/5",
+          "primal_rows": 495,
+          "dual_columns": 220,
+          "schedule_support": 10,
+          "input_support": 4
+        },
+        {
+          "selection": "added",
+          "H": 12,
+          "D": 1,
+          "m": 4,
+          "B": 9,
+          "causal": true,
+          "delta": "2/3",
+          "coverage": "1/3",
+          "primal_rows": 495,
+          "dual_columns": 56,
+          "schedule_support": 3,
+          "input_support": 3
+        },
+        {
+          "selection": "added",
+          "H": 14,
+          "D": 2,
+          "m": 4,
+          "B": 9,
+          "causal": false,
+          "delta": "2/5",
+          "coverage": "3/5",
+          "primal_rows": 1001,
+          "dual_columns": 2002,
+          "schedule_support": 13,
+          "input_support": 4
+        },
+        {
+          "selection": "added",
+          "H": 14,
+          "D": 2,
+          "m": 4,
+          "B": 9,
+          "causal": true,
+          "delta": "2/3",
+          "coverage": "1/3",
+          "primal_rows": 1001,
+          "dual_columns": 252,
+          "schedule_support": 3,
+          "input_support": 3
+        }
+      ]
+    },
+    "fallback_report": {
+      "purpose": "Independent finite check of fallback proof, not a novelty or universal proof",
+      "domain": "H=1..7; m=1..H; B=m..H; D=0..H; all inputs of weight <=m and all terminal-reserve schedules",
+      "independent_matching": "Recursive search over all injective assignments; no greedy matching import",
+      "tested_prior": "Uniform over all reserve schedules for each parameter tuple; theorem covers arbitrary priors",
+      "parameter_cases": 546,
+      "input_schedule_pairs": 45622,
+      "switches": 4069,
+      "prefix_consistency_comparisons": 347870,
+      "exact_tv_checks": 20532,
+      "passed": true,
+      "checker_sha256": "baad0afa4ab89b2ab6b41f7d945fa57dbd4a5b576b2f2ffcc8bfdd6fea5250bf"
+    },
+    "zero_delay_report": {
+      "status": "pass",
+      "cases": 240,
+      "method": "Exact uniform primal/dual witnesses; independently constructed D=0 subset-containment matrix",
+      "domain": "1<=H<=8; 1<=m<=B<=H; both classes; D=0",
+      "primal_rows_checked": 4518,
+      "dual_columns_checked": 2295,
+      "saved_values_all_match": true,
+      "saved_report_sha256": "e95f04a80b7c0a9e84da17ee0f5541b93af1487b8cf26bed0237031d86e01f0a",
+      "python": "3.12.14",
+      "limitations": "Certifies the finite zero-delay games; does not independently prove the causal-game characterization or any unbounded parameter theorem."
+    },
+    "no_savings_report": {
+      "aggregate_counts": {
+        "B_lt_m_impossibility_checks": 1485,
+        "Y_B_intersection_checks_for_B_lt_B0": 1755,
+        "input_checks_at_reserve": 52158,
+        "output_traces_across_instances": 83966,
+        "structural_feasible_trace_checks": 55114
+      },
+      "boundary_certificate": {
+        "B": 1,
+        "B0": 2,
+        "B_lt_B0": true,
+        "D": 0,
+        "H": 2,
+        "K": 2,
+        "class": "noncausal",
+        "delta": "1/2",
+        "delta_equals_1_over_K": true,
+        "epsilon": 0,
+        "m": 1
+      },
+      "checker": "no_savings_check.py",
+      "checks": [
+        "feasible test traces contain the required count in their own block",
+        "Y_B intersection of all test-feasibility events is empty for every B<B0",
+        "the fixed terminal-reserve schedule is feasible for every input of weight at most m",
+        "every B<m is impossible"
+      ],
+      "scope": {
+        "D_ge_H_equivalent_after_deadline_truncation": true,
+        "D_range_inclusive": [
+          0,
+          10
+        ],
+        "H_max": 9,
+        "all_inputs_of_weight_at_most_m_enumerated": true,
+        "all_output_traces_enumerated": true,
+        "m_range": [
+          1,
+          9
+        ],
+        "parameter_sets": 375
+      },
+      "status": "PASS"
+    }
+  },
+  "full_regeneration": {
+    "requested": true,
+    "status": "PASS",
+    "seconds": 10.081011916976422,
+    "certificates": 95,
+    "legacy_certificates": 79,
+    "r4_extra_certificates": 16,
+    "exact_values_match": true,
+    "command": [
+      "/private/tmp/traffic-shaping-computations-venv-check/bin/python",
+      "_full_regenerate.py"
+    ]
+  },
+  "immutable_input_sha256_before": {
+    "CERTIFICATE-CHECK.json": "a343decb39c816d3ddebac0956e0bceb470f9ded75a954afa833fbe6d80a65e6",
+    "ENVIRONMENT-ADDITIONS.json": "4334187f615e9f050ecb7fc530f5611907507bc5bfe09e2e900681dff854b0cb",
+    "ENVIRONMENT.json": "dab30b6a4ec3834558cc6d5d22184e8db6f6c20550da760a2b892354c514ce34",
+    "EXTRA-CERTIFICATE-CHECK.json": "e0b23367064b282b378bcb057542b2ebe91b7e1187b999fbf40698f1e44e4fcb",
+    "EXTRA-CERTIFICATES.json": "f414f8d60f2cd3e673d649341445c55b58c89f23a0dce5bc304877b28ff12518",
+    "FALLBACK-CHECK.json": "a6062279f78170fb2e4a99d18c94e9bad2b870b280bf548f03e3591ee587aa34",
+    "FRONTIERS.json": "203bb3cb3eaf0f15cf5a14ad9e9960edd4233794232e989fd33053c6d0bca265",
+    "NEGATIVE-CHECKS.json": "ff800a23ac5d8d629bf13e89524cb7053e40d48a26180443716e2e8a027534e0",
+    "NO-SAVINGS-CHECK.json": "79f70f9f7a57ce9ee12782789ea84dbcfeda35843b8d978fb3ff5a657f436a5c",
+    "QUANTITATIVE-CHECK.json": "e95f04a80b7c0a9e84da17ee0f5541b93af1487b8cf26bed0237031d86e01f0a",
+    "README.md": "99b1f21bada50cb5b83744fec7fa5db90e9737e02cad961d5923d634c8d678b2",
+    "REPRODUCIBILITY-CHECK.json": "dfd53c6aadab4c851bfdfbb2faed2135169c0e4f69dc900e67bd83482b876e2c",
+    "REPRODUCIBILITY-CHECK.log": "239635032712cf7158ca1525bc4863ceaecbdbf6f5fcf470fe938bc8981ed241",
+    "SHA256SUMS": "52f3bfae2fb4f4bf1b688ecb4d9c23c8884458e7f84783c2b40094849124e78e",
+    "SOURCE-PROVENANCE.json": "2053df801b7131443ab752c7dfc332ad078803b1b6a2f17fe8c8c82e085c0a08",
+    "TABLE-1.csv": "0068c5a807df76ba98e0eb4025dd66b47bdaecc828fd2ae8b3150a76681c9d24",
+    "TABLE-3.csv": "51533339e269633912d29630c5eaffb21ab622a490e3acf6fef263e5d1912bae",
+    "ZERO-DELAY-EXACT-CHECK.json": "c4bc910d03a82f835a444bed73ae337e1241f1c48091a6494290770761c3b7b8",
+    "covering.py": "c9efe69517f6916a82db81b9338299ddf0b629e602281a119b60b9e82b5a220c",
+    "fallback_check.py": "baad0afa4ab89b2ab6b41f7d945fa57dbd4a5b576b2f2ffcc8bfdd6fea5250bf",
+    "independent_certificate_check.py": "e719e74accc873b43b8f1f19bddf473f4cbdf4725a9edf1ad3b725c8f6557145",
+    "no_savings_check.py": "c34b4d2926735c73c6eaa2a4ea8cd54b8bf8eea2cc8edc3004aca46ac9be2ae5",
+    "quantitative_check.py": "36ae461ee91bf5308acba4d6ca5a999a0141d3febd0aa398deebaad105a7cd42",
+    "regenerate_extra.py": "bcd0dc2b55d8d86ef1bfaeb8118e3dadfbb0e72436a4f6d14e7eaf90f947ff87",
+    "regenerate_frontiers.py": "f4d08870e3c1d9c79f6d48fb9346340ea47d360f09506de8b7cf8c6326b39e3b",
+    "requirements.txt": "6e69ffe6f7841e5d8aea3f05a4bf77c60055d3b0717fcccbb31fd19647e07b7b",
+    "run_checks.py": "01a3a0fb7352fa8ac30a4c9860329cc792b4c26a6720e3fc021285c2fe718d62",
+    "verification-extra.log": "e4b5355cf3f4c7b5ac9563d33723f80a4bc0c24c426552593748a64a7d5555f9",
+    "verification-final.log": "5321134b0d8da8a1c1133ef036d9c2996b7e20a1d722a41f63cd1e14639cc00a",
+    "verification.log": "83c1d38820b6ea00442235fd04d9f723a38c415e677a8b9dcfd6d278c77d0500",
+    "verify_extra.py": "883578fe02d9e1c289c3dda64c93ef1b55b860199c085dc577a69f2d8daf1c96",
+    "zero_delay_independent_check.py": "60934888ca21fcb727c5abb65e31ac775fa53d6a37434f1a13f8bb24c2231477"
+  },
+  "immutable_input_sha256_after": {
+    "CERTIFICATE-CHECK.json": "a343decb39c816d3ddebac0956e0bceb470f9ded75a954afa833fbe6d80a65e6",
+    "ENVIRONMENT-ADDITIONS.json": "4334187f615e9f050ecb7fc530f5611907507bc5bfe09e2e900681dff854b0cb",
+    "ENVIRONMENT.json": "dab30b6a4ec3834558cc6d5d22184e8db6f6c20550da760a2b892354c514ce34",
+    "EXTRA-CERTIFICATE-CHECK.json": "e0b23367064b282b378bcb057542b2ebe91b7e1187b999fbf40698f1e44e4fcb",
+    "EXTRA-CERTIFICATES.json": "f414f8d60f2cd3e673d649341445c55b58c89f23a0dce5bc304877b28ff12518",
+    "FALLBACK-CHECK.json": "a6062279f78170fb2e4a99d18c94e9bad2b870b280bf548f03e3591ee587aa34",
+    "FRONTIERS.json": "203bb3cb3eaf0f15cf5a14ad9e9960edd4233794232e989fd33053c6d0bca265",
+    "NEGATIVE-CHECKS.json": "ff800a23ac5d8d629bf13e89524cb7053e40d48a26180443716e2e8a027534e0",
+    "NO-SAVINGS-CHECK.json": "79f70f9f7a57ce9ee12782789ea84dbcfeda35843b8d978fb3ff5a657f436a5c",
+    "QUANTITATIVE-CHECK.json": "e95f04a80b7c0a9e84da17ee0f5541b93af1487b8cf26bed0237031d86e01f0a",
+    "README.md": "99b1f21bada50cb5b83744fec7fa5db90e9737e02cad961d5923d634c8d678b2",
+    "REPRODUCIBILITY-CHECK.json": "dfd53c6aadab4c851bfdfbb2faed2135169c0e4f69dc900e67bd83482b876e2c",
+    "REPRODUCIBILITY-CHECK.log": "239635032712cf7158ca1525bc4863ceaecbdbf6f5fcf470fe938bc8981ed241",
+    "SHA256SUMS": "52f3bfae2fb4f4bf1b688ecb4d9c23c8884458e7f84783c2b40094849124e78e",
+    "SOURCE-PROVENANCE.json": "2053df801b7131443ab752c7dfc332ad078803b1b6a2f17fe8c8c82e085c0a08",
+    "TABLE-1.csv": "0068c5a807df76ba98e0eb4025dd66b47bdaecc828fd2ae8b3150a76681c9d24",
+    "TABLE-3.csv": "51533339e269633912d29630c5eaffb21ab622a490e3acf6fef263e5d1912bae",
+    "ZERO-DELAY-EXACT-CHECK.json": "c4bc910d03a82f835a444bed73ae337e1241f1c48091a6494290770761c3b7b8",
+    "covering.py": "c9efe69517f6916a82db81b9338299ddf0b629e602281a119b60b9e82b5a220c",
+    "fallback_check.py": "baad0afa4ab89b2ab6b41f7d945fa57dbd4a5b576b2f2ffcc8bfdd6fea5250bf",
+    "independent_certificate_check.py": "e719e74accc873b43b8f1f19bddf473f4cbdf4725a9edf1ad3b725c8f6557145",
+    "no_savings_check.py": "c34b4d2926735c73c6eaa2a4ea8cd54b8bf8eea2cc8edc3004aca46ac9be2ae5",
+    "quantitative_check.py": "36ae461ee91bf5308acba4d6ca5a999a0141d3febd0aa398deebaad105a7cd42",
+    "regenerate_extra.py": "bcd0dc2b55d8d86ef1bfaeb8118e3dadfbb0e72436a4f6d14e7eaf90f947ff87",
+    "regenerate_frontiers.py": "f4d08870e3c1d9c79f6d48fb9346340ea47d360f09506de8b7cf8c6326b39e3b",
+    "requirements.txt": "6e69ffe6f7841e5d8aea3f05a4bf77c60055d3b0717fcccbb31fd19647e07b7b",
+    "run_checks.py": "01a3a0fb7352fa8ac30a4c9860329cc792b4c26a6720e3fc021285c2fe718d62",
+    "verification-extra.log": "e4b5355cf3f4c7b5ac9563d33723f80a4bc0c24c426552593748a64a7d5555f9",
+    "verification-final.log": "5321134b0d8da8a1c1133ef036d9c2996b7e20a1d722a41f63cd1e14639cc00a",
+    "verification.log": "83c1d38820b6ea00442235fd04d9f723a38c415e677a8b9dcfd6d278c77d0500",
+    "verify_extra.py": "883578fe02d9e1c289c3dda64c93ef1b55b860199c085dc577a69f2d8daf1c96",
+    "zero_delay_independent_check.py": "60934888ca21fcb727c5abb65e31ac775fa53d6a37434f1a13f8bb24c2231477"
+  },
+  "elapsed_seconds": 14.02730962500209,
+  "limitations": "The certificate checks certify the saved finite witnesses and the requested finite algorithmic domains; they do not replace the manuscript proofs or establish scalability."
+}

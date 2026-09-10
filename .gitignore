@@ -1,0 +1,12 @@
+.DS_Store
+.venv/
+__pycache__/
+*.py[cod]
+.lake/
+.tooling/
+_build/
+.check-output/
+*.log
+!/computations/*.log
+!/review/*.log
+!/verification/*.log

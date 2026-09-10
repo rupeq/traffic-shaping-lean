@@ -1,0 +1,4 @@
+# Preserve the byte-exact files covered by the computational checksum manifest.
+computations/** -text
+# Python's CSV writer uses the standard CRLF record terminator.
+computations/*.csv whitespace=cr-at-eol

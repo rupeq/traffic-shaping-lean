@@ -1,0 +1,43 @@
+=== independent_certificate_check.py ===
+79 stored certificates and the explicit 28-by-15 example verified; TABLE-1.csv written.
+
+=== fallback_check.py ===
+{
+  "purpose": "Independent finite check of fallback proof, not a novelty or universal proof",
+  "domain": "H=1..7; m=1..H; B=m..H; D=0..H; all inputs of weight <=m and all terminal-reserve schedules",
+  "independent_matching": "Recursive search over all injective assignments; no greedy matching import",
+  "tested_prior": "Uniform over all reserve schedules for each parameter tuple; theorem covers arbitrary priors",
+  "parameter_cases": 546,
+  "input_schedule_pairs": 45622,
+  "switches": 4069,
+  "prefix_consistency_comparisons": 347870,
+  "exact_tv_checks": 20532,
+  "passed": true,
+  "checker_sha256": "baad0afa4ab89b2ab6b41f7d945fa57dbd4a5b576b2f2ffcc8bfdd6fea5250bf"
+}
+
+=== quantitative_check.py ===
+{
+  "status": "pass",
+  "source_sha256": {
+    "FRONTIERS.json": "203bb3cb3eaf0f15cf5a14ad9e9960edd4233794232e989fd33053c6d0bca265",
+    "covering.py": "c9efe69517f6916a82db81b9338299ddf0b629e602281a119b60b9e82b5a220c"
+  },
+  "d0_scope": "H=1..8; all 1<=m<=B<=H; both games; D=0",
+  "d0_exact_LP_comparisons": 240,
+  "saved_frontier_records": 79,
+  "saved_families": 9,
+  "saved_frontier_scope": "Existing records only; all families have m=2.",
+  "budget_price_check_count": 43,
+  "privacy_bound_check_count": 66,
+  "limitations": "Finite checks support the general proofs; no independent general proof follows from finite enumeration alone."
+}
+{"H": 8, "D": 1, "m": 2, "pure_budget": 6, "modes": {"off": {"min_positive_delta": "1/3", "cap_at_delta": {"0": 6, "1/100": 6, "1/10": 6, "1/3": 5, "1/2": 4, "9/10": 2}, "exact_frontier": {"2": "9/10", "3": "7/10", "4": "4/9", "5": "1/3", "6": "0"}}, "on": {"min_positive_delta": "1/2", "cap_at_delta": {"0": 6, "1/100": 6, "1/10": 6, "1/3": 6, "1/2": 5, "9/10": 4}, "exact_frontier": {"2": "1", "3": "1", "4": "2/3", "5": "1/2", "6": "0"}}}}
+{"H": 8, "D": 2, "m": 2, "pure_budget": 4, "modes": {"off": {"min_positive_delta": "1/2", "cap_at_delta": {"0": 4, "1/100": 4, "1/10": 4, "1/3": 4, "1/2": 3, "9/10": 2}, "exact_frontier": {"2": "5/6", "3": "1/2", "4": "0"}}, "on": {"min_positive_delta": "1", "cap_at_delta": {"0": 4, "1/100": 4, "1/10": 4, "1/3": 4, "1/2": 4, "9/10": 4}, "exact_frontier": {"2": "1", "3": "1", "4": "0"}}}}
+{"H": 8, "D": 3, "m": 2, "pure_budget": 4, "modes": {"off": {"min_positive_delta": "1/2", "cap_at_delta": {"0": 4, "1/100": 4, "1/10": 4, "1/3": 4, "1/2": 3, "9/10": 2}, "exact_frontier": {"2": "2/3", "3": "1/2", "4": "0"}}, "on": {"min_positive_delta": "1", "cap_at_delta": {"0": 4, "1/100": 4, "1/10": 4, "1/3": 4, "1/2": 4, "9/10": 4}, "exact_frontier": {"2": "1", "3": "1", "4": "0"}}}}
+{"H": 12, "D": 1, "m": 2, "pure_budget": 8, "modes": {"off": {"min_positive_delta": "1/4", "cap_at_delta": {"0": 8, "1/100": 8, "1/10": 8, "1/3": 7, "1/2": 6, "9/10": 3}, "exact_frontier": {"2": "20/21", "3": "6/7", "4": "627/872", "5": "65/114", "6": "13/32", "7": "1/4", "8": "0"}}, "on": {"min_positive_delta": "1/3", "cap_at_delta": {"0": 8, "1/100": 8, "1/10": 8, "1/3": 7, "1/2": 7, "9/10": 4}, "exact_frontier": {"2": "1", "3": "1", "4": "9/10", "5": "3/4", "6": "6/11", "7": "1/3", "8": "0"}}}}
+{"H": 12, "D": 2, "m": 2, "pure_budget": 6, "modes": {"off": {"min_positive_delta": "1/3", "cap_at_delta": {"0": 6, "1/100": 6, "1/10": 6, "1/3": 5, "1/2": 5, "9/10": 2}, "exact_frontier": {"2": "9/10", "3": "3/4", "4": "6/11", "5": "1/3", "6": "0"}}, "on": {"min_positive_delta": "1/2", "cap_at_delta": {"0": 6, "1/100": 6, "1/10": 6, "1/3": 6, "1/2": 5, "9/10": 4}, "exact_frontier": {"2": "1", "3": "1", "4": "5/6", "5": "1/2", "6": "0"}}}}
+{"H": 12, "D": 3, "m": 2, "pure_budget": 6, "modes": {"off": {"min_positive_delta": "1/3", "cap_at_delta": {"0": 6, "1/100": 6, "1/10": 6, "1/3": 5, "1/2": 4, "9/10": 2}, "exact_frontier": {"2": "5/6", "3": "2/3", "4": "4/9", "5": "1/3", "6": "0"}}, "on": {"min_positive_delta": "1/2", "cap_at_delta": {"0": 6, "1/100": 6, "1/10": 6, "1/3": 6, "1/2": 5, "9/10": 4}, "exact_frontier": {"2": "1", "3": "1", "4": "2/3", "5": "1/2", "6": "0"}}}}
+{"H": 16, "D": 1, "m": 2, "pure_budget": 11, "modes": {"on": {"min_positive_delta": "2/9", "cap_at_delta": {"0": 11, "1/100": 11, "1/10": 11, "1/3": 10, "1/2": 8, "9/10": 5}, "exact_frontier": {"2": "1", "3": "1", "4": "20/21", "5": "27/31", "6": "12277/16216", "7": "1164/1873", "8": "71/149", "9": "8/23", "10": "2/9", "11": "0"}}}}
+{"H": 16, "D": 2, "m": 2, "pure_budget": 8, "modes": {"on": {"min_positive_delta": "1/3", "cap_at_delta": {"0": 8, "1/100": 8, "1/10": 8, "1/3": 7, "1/2": 7, "9/10": 4}, "exact_frontier": {"2": "1", "3": "1", "4": "9/10", "5": "3/4", "6": "6/11", "7": "1/3", "8": "0"}}}}
+{"H": 16, "D": 3, "m": 2, "pure_budget": 7, "modes": {"on": {"min_positive_delta": "2/5", "cap_at_delta": {"0": 7, "1/100": 7, "1/10": 7, "1/3": 7, "1/2": 6, "9/10": 4}, "exact_frontier": {"2": "1", "3": "1", "4": "5/6", "5": "8/13", "6": "2/5", "7": "0"}}}}

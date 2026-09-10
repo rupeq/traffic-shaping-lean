@@ -1,0 +1,13 @@
+{
+  "purpose": "Independent finite check of fallback proof, not a novelty or universal proof",
+  "domain": "H=1..7; m=1..H; B=m..H; D=0..H; all inputs of weight <=m and all terminal-reserve schedules",
+  "independent_matching": "Recursive search over all injective assignments; no greedy matching import",
+  "tested_prior": "Uniform over all reserve schedules for each parameter tuple; theorem covers arbitrary priors",
+  "parameter_cases": 546,
+  "input_schedule_pairs": 45622,
+  "switches": 4069,
+  "prefix_consistency_comparisons": 347870,
+  "exact_tv_checks": 20532,
+  "passed": true,
+  "checker_sha256": "baad0afa4ab89b2ab6b41f7d945fa57dbd4a5b576b2f2ffcc8bfdd6fea5250bf"
+}

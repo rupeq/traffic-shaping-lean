@@ -1,0 +1,20 @@
+$ python independent_certificate_check.py
+79 stored certificates and the explicit 28-by-15 example verified; TABLE-1.csv written.
+
+$ python fallback_check.py
+{
+  "purpose": "Independent finite check of fallback proof, not a novelty or universal proof",
+  "domain": "H=1..7; m=1..H; B=m..H; D=0..H; all inputs of weight <=m and all terminal-reserve schedules",
+  "independent_matching": "Recursive search over all injective assignments; no greedy matching import",
+  "tested_prior": "Uniform over all reserve schedules for each parameter tuple; theorem covers arbitrary priors",
+  "parameter_cases": 546,
+  "input_schedule_pairs": 45622,
+  "switches": 4069,
+  "prefix_consistency_comparisons": 347870,
+  "exact_tv_checks": 20532,
+  "passed": true,
+  "checker_sha256": "baad0afa4ab89b2ab6b41f7d945fa57dbd4a5b576b2f2ffcc8bfdd6fea5250bf"
+}
+
+$ python zero_delay_independent_check.py
+{"status": "pass", "cases": 240, "method": "Exact uniform primal/dual witnesses; independently constructed D=0 subset-containment matrix", "domain": "1<=H<=8; 1<=m<=B<=H; both classes; D=0", "primal_rows_checked": 4518, "dual_columns_checked": 2295, "saved_values_all_match": true, "saved_report_sha256": "e95f04a80b7c0a9e84da17ee0f5541b93af1487b8cf26bed0237031d86e01f0a", "python": "3.12.14", "limitations": "Certifies the finite zero-delay games; does not independently prove the causal-game characterization or any unbounded parameter theorem."}

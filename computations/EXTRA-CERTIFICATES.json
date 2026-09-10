@@ -1,0 +1,1249 @@
+{
+  "description": "Sixteen exact positive-delay primal/dual certificates: the original eight records are retained, and eight added records cover four further finite games in both classes. These are finite examples for checking the manuscript claims, not scalability benchmarks.",
+  "generator": "regenerate_extra.py",
+  "optimizer": "neighboring covering.py:solve",
+  "independent_checker": "neighboring independent_certificate_check.py:check",
+  "scope": "original four tuples retained; added four tuples solved fresh; both causal and offline classes; no earlier frontier records",
+  "original_cases": [
+    {
+      "H": 8,
+      "D": 1,
+      "m": 3,
+      "B": 5
+    },
+    {
+      "H": 8,
+      "D": 2,
+      "m": 3,
+      "B": 4
+    },
+    {
+      "H": 10,
+      "D": 1,
+      "m": 4,
+      "B": 7
+    },
+    {
+      "H": 10,
+      "D": 2,
+      "m": 4,
+      "B": 7
+    }
+  ],
+  "added_cases": [
+    {
+      "H": 10,
+      "D": 1,
+      "m": 3,
+      "B": 7
+    },
+    {
+      "H": 12,
+      "D": 2,
+      "m": 3,
+      "B": 7
+    },
+    {
+      "H": 12,
+      "D": 1,
+      "m": 4,
+      "B": 9
+    },
+    {
+      "H": 14,
+      "D": 2,
+      "m": 4,
+      "B": 9
+    }
+  ],
+  "records": [
+    {
+      "horizon": 8,
+      "delay": 1,
+      "max_arrivals": 3,
+      "total_cap": 5,
+      "causal": false,
+      "status": 0,
+      "inputs": 56,
+      "schedules": 56,
+      "variables": 57,
+      "coverage": 0.5,
+      "delta": 0.5,
+      "seconds": 0.008647749957162887,
+      "policy": {
+        "10111010": "1/6",
+        "10111001": "1/6",
+        "10100111": "1/6",
+        "01110011": "1/6",
+        "01010111": "1/6",
+        "00101111": "1/6"
+      },
+      "certificate": {
+        "verified": true,
+        "coverage": "1/2",
+        "delta": "1/2",
+        "schedule_weights": {
+          "10111010": "1/6",
+          "10111001": "1/6",
+          "10100111": "1/6",
+          "01110011": "1/6",
+          "01010111": "1/6",
+          "00101111": "1/6"
+        },
+        "input_weights": {
+          "11000001": "1/2",
+          "00011100": "1/2"
+        },
+        "checks": "Fraction: nonnegative normalized primal and dual weights; every input covered >= v; every schedule covers dual <= v; equality"
+      }
+    },
+    {
+      "horizon": 8,
+      "delay": 1,
+      "max_arrivals": 3,
+      "total_cap": 5,
+      "causal": true,
+      "status": 0,
+      "inputs": 56,
+      "schedules": 10,
+      "variables": 11,
+      "coverage": -0.0,
+      "delta": 1.0,
+      "seconds": 0.0012310839956626296,
+      "policy": {
+        "11000111": "1"
+      },
+      "certificate": {
+        "verified": true,
+        "coverage": "0",
+        "delta": "1",
+        "schedule_weights": {
+          "11000111": "1"
+        },
+        "input_weights": {
+          "11100000": "1"
+        },
+        "checks": "Fraction: nonnegative normalized primal and dual weights; every input covered >= v; every schedule covers dual <= v; equality"
+      }
+    },
+    {
+      "horizon": 8,
+      "delay": 2,
+      "max_arrivals": 3,
+      "total_cap": 4,
+      "causal": false,
+      "status": 0,
+      "inputs": 56,
+      "schedules": 70,
+      "variables": 71,
+      "coverage": 0.5,
+      "delta": 0.5,
+      "seconds": 0.003879541007336229,
+      "policy": {
+        "00111001": "1/2",
+        "00100111": "1/2"
+      },
+      "certificate": {
+        "verified": true,
+        "coverage": "1/2",
+        "delta": "1/2",
+        "schedule_weights": {
+          "00111001": "1/2",
+          "00100111": "1/2"
+        },
+        "input_weights": {
+          "10101000": "1/2",
+          "00000111": "1/2"
+        },
+        "checks": "Fraction: nonnegative normalized primal and dual weights; every input covered >= v; every schedule covers dual <= v; equality"
+      }
+    },
+    {
+      "horizon": 8,
+      "delay": 2,
+      "max_arrivals": 3,
+      "total_cap": 4,
+      "causal": true,
+      "status": 0,
+      "inputs": 56,
+      "schedules": 5,
+      "variables": 6,
+      "coverage": -0.0,
+      "delta": 1.0,
+      "seconds": 0.0009710000013001263,
+      "policy": {
+        "10000111": "1"
+      },
+      "certificate": {
+        "verified": true,
+        "coverage": "0",
+        "delta": "1",
+        "schedule_weights": {
+          "10000111": "1"
+        },
+        "input_weights": {
+          "11100000": "1"
+        },
+        "checks": "Fraction: nonnegative normalized primal and dual weights; every input covered >= v; every schedule covers dual <= v; equality"
+      }
+    },
+    {
+      "horizon": 10,
+      "delay": 1,
+      "max_arrivals": 4,
+      "total_cap": 7,
+      "causal": false,
+      "status": 0,
+      "inputs": 210,
+      "schedules": 120,
+      "variables": 121,
+      "coverage": 0.5,
+      "delta": 0.5,
+      "seconds": 0.024542875005863607,
+      "policy": {
+        "1110001111": "1/8",
+        "1101111001": "1/8",
+        "1011110110": "1/8",
+        "0111101011": "1/8",
+        "0111100111": "1/8",
+        "0110101111": "1/8",
+        "0100111111": "1/8",
+        "0011101111": "1/8"
+      },
+      "certificate": {
+        "verified": true,
+        "coverage": "1/2",
+        "delta": "1/2",
+        "schedule_weights": {
+          "1110001111": "1/8",
+          "1101111001": "1/8",
+          "1011110110": "1/8",
+          "0111101011": "1/8",
+          "0111100111": "1/8",
+          "0110101111": "1/8",
+          "0100111111": "1/8",
+          "0011101111": "1/8"
+        },
+        "input_weights": {
+          "1000000111": "1/2",
+          "0011110000": "1/2"
+        },
+        "checks": "Fraction: nonnegative normalized primal and dual weights; every input covered >= v; every schedule covers dual <= v; equality"
+      }
+    },
+    {
+      "horizon": 10,
+      "delay": 1,
+      "max_arrivals": 4,
+      "total_cap": 7,
+      "causal": true,
+      "status": 0,
+      "inputs": 210,
+      "schedules": 20,
+      "variables": 21,
+      "coverage": -0.0,
+      "delta": 1.0,
+      "seconds": 0.004199874994810671,
+      "policy": {
+        "1110001111": "1"
+      },
+      "certificate": {
+        "verified": true,
+        "coverage": "0",
+        "delta": "1",
+        "schedule_weights": {
+          "1110001111": "1"
+        },
+        "input_weights": {
+          "1111000000": "1"
+        },
+        "checks": "Fraction: nonnegative normalized primal and dual weights; every input covered >= v; every schedule covers dual <= v; equality"
+      }
+    },
+    {
+      "horizon": 10,
+      "delay": 2,
+      "max_arrivals": 4,
+      "total_cap": 7,
+      "causal": false,
+      "status": 0,
+      "inputs": 210,
+      "schedules": 120,
+      "variables": 121,
+      "coverage": 0.5,
+      "delta": 0.5,
+      "seconds": 0.026610208966303617,
+      "policy": {
+        "1111001101": "1/4",
+        "1111001011": "1/4",
+        "1101001111": "1/4",
+        "1011001111": "1/4"
+      },
+      "certificate": {
+        "verified": true,
+        "coverage": "1/2",
+        "delta": "1/2",
+        "schedule_weights": {
+          "1111001101": "1/4",
+          "1111001011": "1/4",
+          "1101001111": "1/4",
+          "1011001111": "1/4"
+        },
+        "input_weights": {
+          "1111000000": "1/2",
+          "0000001111": "1/2"
+        },
+        "checks": "Fraction: nonnegative normalized primal and dual weights; every input covered >= v; every schedule covers dual <= v; equality"
+      }
+    },
+    {
+      "horizon": 10,
+      "delay": 2,
+      "max_arrivals": 4,
+      "total_cap": 7,
+      "causal": true,
+      "status": 0,
+      "inputs": 210,
+      "schedules": 20,
+      "variables": 21,
+      "coverage": -0.0,
+      "delta": 1.0,
+      "seconds": 0.004766208003275096,
+      "policy": {
+        "1110001111": "1"
+      },
+      "certificate": {
+        "verified": true,
+        "coverage": "0",
+        "delta": "1",
+        "schedule_weights": {
+          "1110001111": "1"
+        },
+        "input_weights": {
+          "1111000000": "1"
+        },
+        "checks": "Fraction: nonnegative normalized primal and dual weights; every input covered >= v; every schedule covers dual <= v; equality"
+      }
+    },
+    {
+      "horizon": 10,
+      "delay": 1,
+      "max_arrivals": 3,
+      "total_cap": 7,
+      "causal": false,
+      "status": 0,
+      "inputs": 120,
+      "schedules": 120,
+      "variables": 121,
+      "coverage": 0.6666666666666666,
+      "delta": 0.33333333333333337,
+      "seconds": 0.01884804101428017,
+      "policy": {
+        "1011101101": "1/3",
+        "1011010111": "1/3",
+        "0101101111": "1/3"
+      },
+      "certificate": {
+        "verified": true,
+        "coverage": "2/3",
+        "delta": "1/3",
+        "schedule_weights": {
+          "1011101101": "1/3",
+          "1011010111": "1/3",
+          "0101101111": "1/3"
+        },
+        "input_weights": {
+          "1110000000": "1/3",
+          "0010000011": "1/3",
+          "0000111000": "1/3"
+        },
+        "checks": "Fraction: nonnegative normalized primal and dual weights; every input covered >= v; every schedule covers dual <= v; equality"
+      }
+    },
+    {
+      "horizon": 10,
+      "delay": 1,
+      "max_arrivals": 3,
+      "total_cap": 7,
+      "causal": true,
+      "status": 0,
+      "inputs": 120,
+      "schedules": 35,
+      "variables": 36,
+      "coverage": 0.5,
+      "delta": 0.5,
+      "seconds": 0.004686458967626095,
+      "policy": {
+        "0111010111": "1/2",
+        "0101101111": "1/2"
+      },
+      "certificate": {
+        "verified": true,
+        "coverage": "1/2",
+        "delta": "1/2",
+        "schedule_weights": {
+          "0111010111": "1/2",
+          "0101101111": "1/2"
+        },
+        "input_weights": {
+          "1110000000": "1/2",
+          "1000110000": "1/2"
+        },
+        "checks": "Fraction: nonnegative normalized primal and dual weights; every input covered >= v; every schedule covers dual <= v; equality"
+      }
+    },
+    {
+      "horizon": 12,
+      "delay": 2,
+      "max_arrivals": 3,
+      "total_cap": 7,
+      "causal": false,
+      "status": 0,
+      "inputs": 220,
+      "schedules": 792,
+      "variables": 793,
+      "coverage": 0.6666666666666667,
+      "delta": 0.33333333333333326,
+      "seconds": 0.17208608402870595,
+      "policy": {
+        "110011100101": "1/3",
+        "011100100111": "1/3",
+        "001010110111": "1/3"
+      },
+      "certificate": {
+        "verified": true,
+        "coverage": "2/3",
+        "delta": "1/3",
+        "schedule_weights": {
+          "110011100101": "1/3",
+          "011100100111": "1/3",
+          "001010110111": "1/3"
+        },
+        "input_weights": {
+          "111000000000": "1/3",
+          "000001100100": "1/3",
+          "000000000111": "1/3"
+        },
+        "checks": "Fraction: nonnegative normalized primal and dual weights; every input covered >= v; every schedule covers dual <= v; equality"
+      }
+    },
+    {
+      "horizon": 12,
+      "delay": 2,
+      "max_arrivals": 3,
+      "total_cap": 7,
+      "causal": true,
+      "status": 0,
+      "inputs": 220,
+      "schedules": 126,
+      "variables": 127,
+      "coverage": 0.5,
+      "delta": 0.5,
+      "seconds": 0.027236875030212104,
+      "policy": {
+        "011010010111": "1/2",
+        "001001110111": "1/2"
+      },
+      "certificate": {
+        "verified": true,
+        "coverage": "1/2",
+        "delta": "1/2",
+        "schedule_weights": {
+          "011010010111": "1/2",
+          "001001110111": "1/2"
+        },
+        "input_weights": {
+          "111000000000": "1/2",
+          "001001100000": "1/2"
+        },
+        "checks": "Fraction: nonnegative normalized primal and dual weights; every input covered >= v; every schedule covers dual <= v; equality"
+      }
+    },
+    {
+      "horizon": 12,
+      "delay": 1,
+      "max_arrivals": 4,
+      "total_cap": 9,
+      "causal": false,
+      "status": 0,
+      "inputs": 495,
+      "schedules": 220,
+      "variables": 221,
+      "coverage": 0.6000000000000001,
+      "delta": 0.3999999999999999,
+      "seconds": 0.11816587497014552,
+      "policy": {
+        "111101111001": "1/10",
+        "110111101101": "1/10",
+        "110111001111": "1/10",
+        "101110011111": "1/10",
+        "011110111011": "1/10",
+        "011110110111": "1/10",
+        "011100111111": "1/10",
+        "011011101111": "1/10",
+        "010101111111": "1/10",
+        "001110111111": "1/10"
+      },
+      "certificate": {
+        "verified": true,
+        "coverage": "3/5",
+        "delta": "2/5",
+        "schedule_weights": {
+          "111101111001": "1/10",
+          "110111101101": "1/10",
+          "110111001111": "1/10",
+          "101110011111": "1/10",
+          "011110111011": "1/10",
+          "011110110111": "1/10",
+          "011100111111": "1/10",
+          "011011101111": "1/10",
+          "010101111111": "1/10",
+          "001110111111": "1/10"
+        },
+        "input_weights": {
+          "111100000000": "1/5",
+          "110001100000": "1/5",
+          "000111100000": "1/5",
+          "000000001111": "2/5"
+        },
+        "checks": "Fraction: nonnegative normalized primal and dual weights; every input covered >= v; every schedule covers dual <= v; equality"
+      }
+    },
+    {
+      "horizon": 12,
+      "delay": 1,
+      "max_arrivals": 4,
+      "total_cap": 9,
+      "causal": true,
+      "status": 0,
+      "inputs": 495,
+      "schedules": 56,
+      "variables": 57,
+      "coverage": 0.3333333333333333,
+      "delta": 0.6666666666666667,
+      "seconds": 0.029427041998133063,
+      "policy": {
+        "101110101111": "1/3",
+        "101100111111": "1/3",
+        "010111011111": "1/3"
+      },
+      "certificate": {
+        "verified": true,
+        "coverage": "1/3",
+        "delta": "2/3",
+        "schedule_weights": {
+          "101110101111": "1/3",
+          "101100111111": "1/3",
+          "010111011111": "1/3"
+        },
+        "input_weights": {
+          "111100000000": "1/3",
+          "110001100000": "1/3",
+          "000111100000": "1/3"
+        },
+        "checks": "Fraction: nonnegative normalized primal and dual weights; every input covered >= v; every schedule covers dual <= v; equality"
+      }
+    },
+    {
+      "horizon": 14,
+      "delay": 2,
+      "max_arrivals": 4,
+      "total_cap": 9,
+      "causal": false,
+      "status": 0,
+      "inputs": 1001,
+      "schedules": 2002,
+      "variables": 2003,
+      "coverage": 0.6000000000000001,
+      "delta": 0.3999999999999999,
+      "seconds": 2.427768166991882,
+      "policy": {
+        "11111011011000": "1/10",
+        "11011100110011": "1/20",
+        "11001101101101": "1/10",
+        "10101101011011": "1/20",
+        "10101101010111": "1/20",
+        "10010101101111": "1/10",
+        "01111000011111": "1/20",
+        "01110101110011": "1/20",
+        "01101101001111": "3/20",
+        "01011011001111": "1/10",
+        "01000111101111": "1/20",
+        "00101110011111": "1/10",
+        "00010011111111": "1/20"
+      },
+      "certificate": {
+        "verified": true,
+        "coverage": "3/5",
+        "delta": "2/5",
+        "schedule_weights": {
+          "11111011011000": "1/10",
+          "11011100110011": "1/20",
+          "11001101101101": "1/10",
+          "10101101011011": "1/20",
+          "10101101010111": "1/20",
+          "10010101101111": "1/10",
+          "01111000011111": "1/20",
+          "01110101110011": "1/20",
+          "01101101001111": "3/20",
+          "01011011001111": "1/10",
+          "01000111101111": "1/20",
+          "00101110011111": "1/10",
+          "00010011111111": "1/20"
+        },
+        "input_weights": {
+          "11110000000000": "2/5",
+          "00000011110000": "1/5",
+          "00000011000011": "1/5",
+          "00000000001111": "1/5"
+        },
+        "checks": "Fraction: nonnegative normalized primal and dual weights; every input covered >= v; every schedule covers dual <= v; equality"
+      }
+    },
+    {
+      "horizon": 14,
+      "delay": 2,
+      "max_arrivals": 4,
+      "total_cap": 9,
+      "causal": true,
+      "status": 0,
+      "inputs": 1001,
+      "schedules": 252,
+      "variables": 253,
+      "coverage": 0.3333333333333333,
+      "delta": 0.6666666666666667,
+      "seconds": 0.2830919999978505,
+      "policy": {
+        "10101101001111": "1/3",
+        "01010011011111": "1/3",
+        "00011111001111": "1/3"
+      },
+      "certificate": {
+        "verified": true,
+        "coverage": "1/3",
+        "delta": "2/3",
+        "schedule_weights": {
+          "10101101001111": "1/3",
+          "01010011011111": "1/3",
+          "00011111001111": "1/3"
+        },
+        "input_weights": {
+          "11110000000000": "1/3",
+          "11000011000000": "1/3",
+          "00001111000000": "1/3"
+        },
+        "checks": "Fraction: nonnegative normalized primal and dual weights; every input covered >= v; every schedule covers dual <= v; equality"
+      }
+    }
+  ],
+  "checked": [
+    {
+      "selection": "original",
+      "H": 8,
+      "D": 1,
+      "m": 3,
+      "B": 5,
+      "causal": false,
+      "delta": "1/2",
+      "coverage": "1/2",
+      "primal_rows": 56,
+      "dual_columns": 56,
+      "schedule_support": 6,
+      "input_support": 2
+    },
+    {
+      "selection": "original",
+      "H": 8,
+      "D": 1,
+      "m": 3,
+      "B": 5,
+      "causal": true,
+      "delta": "1",
+      "coverage": "0",
+      "primal_rows": 56,
+      "dual_columns": 10,
+      "schedule_support": 1,
+      "input_support": 1
+    },
+    {
+      "selection": "original",
+      "H": 8,
+      "D": 2,
+      "m": 3,
+      "B": 4,
+      "causal": false,
+      "delta": "1/2",
+      "coverage": "1/2",
+      "primal_rows": 56,
+      "dual_columns": 70,
+      "schedule_support": 2,
+      "input_support": 2
+    },
+    {
+      "selection": "original",
+      "H": 8,
+      "D": 2,
+      "m": 3,
+      "B": 4,
+      "causal": true,
+      "delta": "1",
+      "coverage": "0",
+      "primal_rows": 56,
+      "dual_columns": 5,
+      "schedule_support": 1,
+      "input_support": 1
+    },
+    {
+      "selection": "original",
+      "H": 10,
+      "D": 1,
+      "m": 4,
+      "B": 7,
+      "causal": false,
+      "delta": "1/2",
+      "coverage": "1/2",
+      "primal_rows": 210,
+      "dual_columns": 120,
+      "schedule_support": 8,
+      "input_support": 2
+    },
+    {
+      "selection": "original",
+      "H": 10,
+      "D": 1,
+      "m": 4,
+      "B": 7,
+      "causal": true,
+      "delta": "1",
+      "coverage": "0",
+      "primal_rows": 210,
+      "dual_columns": 20,
+      "schedule_support": 1,
+      "input_support": 1
+    },
+    {
+      "selection": "original",
+      "H": 10,
+      "D": 2,
+      "m": 4,
+      "B": 7,
+      "causal": false,
+      "delta": "1/2",
+      "coverage": "1/2",
+      "primal_rows": 210,
+      "dual_columns": 120,
+      "schedule_support": 4,
+      "input_support": 2
+    },
+    {
+      "selection": "original",
+      "H": 10,
+      "D": 2,
+      "m": 4,
+      "B": 7,
+      "causal": true,
+      "delta": "1",
+      "coverage": "0",
+      "primal_rows": 210,
+      "dual_columns": 20,
+      "schedule_support": 1,
+      "input_support": 1
+    },
+    {
+      "selection": "added",
+      "H": 10,
+      "D": 1,
+      "m": 3,
+      "B": 7,
+      "causal": false,
+      "delta": "1/3",
+      "coverage": "2/3",
+      "primal_rows": 120,
+      "dual_columns": 120,
+      "schedule_support": 3,
+      "input_support": 3
+    },
+    {
+      "selection": "added",
+      "H": 10,
+      "D": 1,
+      "m": 3,
+      "B": 7,
+      "causal": true,
+      "delta": "1/2",
+      "coverage": "1/2",
+      "primal_rows": 120,
+      "dual_columns": 35,
+      "schedule_support": 2,
+      "input_support": 2
+    },
+    {
+      "selection": "added",
+      "H": 12,
+      "D": 2,
+      "m": 3,
+      "B": 7,
+      "causal": false,
+      "delta": "1/3",
+      "coverage": "2/3",
+      "primal_rows": 220,
+      "dual_columns": 792,
+      "schedule_support": 3,
+      "input_support": 3
+    },
+    {
+      "selection": "added",
+      "H": 12,
+      "D": 2,
+      "m": 3,
+      "B": 7,
+      "causal": true,
+      "delta": "1/2",
+      "coverage": "1/2",
+      "primal_rows": 220,
+      "dual_columns": 126,
+      "schedule_support": 2,
+      "input_support": 2
+    },
+    {
+      "selection": "added",
+      "H": 12,
+      "D": 1,
+      "m": 4,
+      "B": 9,
+      "causal": false,
+      "delta": "2/5",
+      "coverage": "3/5",
+      "primal_rows": 495,
+      "dual_columns": 220,
+      "schedule_support": 10,
+      "input_support": 4
+    },
+    {
+      "selection": "added",
+      "H": 12,
+      "D": 1,
+      "m": 4,
+      "B": 9,
+      "causal": true,
+      "delta": "2/3",
+      "coverage": "1/3",
+      "primal_rows": 495,
+      "dual_columns": 56,
+      "schedule_support": 3,
+      "input_support": 3
+    },
+    {
+      "selection": "added",
+      "H": 14,
+      "D": 2,
+      "m": 4,
+      "B": 9,
+      "causal": false,
+      "delta": "2/5",
+      "coverage": "3/5",
+      "primal_rows": 1001,
+      "dual_columns": 2002,
+      "schedule_support": 13,
+      "input_support": 4
+    },
+    {
+      "selection": "added",
+      "H": 14,
+      "D": 2,
+      "m": 4,
+      "B": 9,
+      "causal": true,
+      "delta": "2/3",
+      "coverage": "1/3",
+      "primal_rows": 1001,
+      "dual_columns": 252,
+      "schedule_support": 3,
+      "input_support": 3
+    }
+  ],
+  "original_checked": [
+    {
+      "selection": "original",
+      "H": 8,
+      "D": 1,
+      "m": 3,
+      "B": 5,
+      "causal": false,
+      "delta": "1/2",
+      "coverage": "1/2",
+      "primal_rows": 56,
+      "dual_columns": 56,
+      "schedule_support": 6,
+      "input_support": 2
+    },
+    {
+      "selection": "original",
+      "H": 8,
+      "D": 1,
+      "m": 3,
+      "B": 5,
+      "causal": true,
+      "delta": "1",
+      "coverage": "0",
+      "primal_rows": 56,
+      "dual_columns": 10,
+      "schedule_support": 1,
+      "input_support": 1
+    },
+    {
+      "selection": "original",
+      "H": 8,
+      "D": 2,
+      "m": 3,
+      "B": 4,
+      "causal": false,
+      "delta": "1/2",
+      "coverage": "1/2",
+      "primal_rows": 56,
+      "dual_columns": 70,
+      "schedule_support": 2,
+      "input_support": 2
+    },
+    {
+      "selection": "original",
+      "H": 8,
+      "D": 2,
+      "m": 3,
+      "B": 4,
+      "causal": true,
+      "delta": "1",
+      "coverage": "0",
+      "primal_rows": 56,
+      "dual_columns": 5,
+      "schedule_support": 1,
+      "input_support": 1
+    },
+    {
+      "selection": "original",
+      "H": 10,
+      "D": 1,
+      "m": 4,
+      "B": 7,
+      "causal": false,
+      "delta": "1/2",
+      "coverage": "1/2",
+      "primal_rows": 210,
+      "dual_columns": 120,
+      "schedule_support": 8,
+      "input_support": 2
+    },
+    {
+      "selection": "original",
+      "H": 10,
+      "D": 1,
+      "m": 4,
+      "B": 7,
+      "causal": true,
+      "delta": "1",
+      "coverage": "0",
+      "primal_rows": 210,
+      "dual_columns": 20,
+      "schedule_support": 1,
+      "input_support": 1
+    },
+    {
+      "selection": "original",
+      "H": 10,
+      "D": 2,
+      "m": 4,
+      "B": 7,
+      "causal": false,
+      "delta": "1/2",
+      "coverage": "1/2",
+      "primal_rows": 210,
+      "dual_columns": 120,
+      "schedule_support": 4,
+      "input_support": 2
+    },
+    {
+      "selection": "original",
+      "H": 10,
+      "D": 2,
+      "m": 4,
+      "B": 7,
+      "causal": true,
+      "delta": "1",
+      "coverage": "0",
+      "primal_rows": 210,
+      "dual_columns": 20,
+      "schedule_support": 1,
+      "input_support": 1
+    }
+  ],
+  "added_checked": [
+    {
+      "selection": "added",
+      "H": 10,
+      "D": 1,
+      "m": 3,
+      "B": 7,
+      "causal": false,
+      "delta": "1/3",
+      "coverage": "2/3",
+      "primal_rows": 120,
+      "dual_columns": 120,
+      "schedule_support": 3,
+      "input_support": 3
+    },
+    {
+      "selection": "added",
+      "H": 10,
+      "D": 1,
+      "m": 3,
+      "B": 7,
+      "causal": true,
+      "delta": "1/2",
+      "coverage": "1/2",
+      "primal_rows": 120,
+      "dual_columns": 35,
+      "schedule_support": 2,
+      "input_support": 2
+    },
+    {
+      "selection": "added",
+      "H": 12,
+      "D": 2,
+      "m": 3,
+      "B": 7,
+      "causal": false,
+      "delta": "1/3",
+      "coverage": "2/3",
+      "primal_rows": 220,
+      "dual_columns": 792,
+      "schedule_support": 3,
+      "input_support": 3
+    },
+    {
+      "selection": "added",
+      "H": 12,
+      "D": 2,
+      "m": 3,
+      "B": 7,
+      "causal": true,
+      "delta": "1/2",
+      "coverage": "1/2",
+      "primal_rows": 220,
+      "dual_columns": 126,
+      "schedule_support": 2,
+      "input_support": 2
+    },
+    {
+      "selection": "added",
+      "H": 12,
+      "D": 1,
+      "m": 4,
+      "B": 9,
+      "causal": false,
+      "delta": "2/5",
+      "coverage": "3/5",
+      "primal_rows": 495,
+      "dual_columns": 220,
+      "schedule_support": 10,
+      "input_support": 4
+    },
+    {
+      "selection": "added",
+      "H": 12,
+      "D": 1,
+      "m": 4,
+      "B": 9,
+      "causal": true,
+      "delta": "2/3",
+      "coverage": "1/3",
+      "primal_rows": 495,
+      "dual_columns": 56,
+      "schedule_support": 3,
+      "input_support": 3
+    },
+    {
+      "selection": "added",
+      "H": 14,
+      "D": 2,
+      "m": 4,
+      "B": 9,
+      "causal": false,
+      "delta": "2/5",
+      "coverage": "3/5",
+      "primal_rows": 1001,
+      "dual_columns": 2002,
+      "schedule_support": 13,
+      "input_support": 4
+    },
+    {
+      "selection": "added",
+      "H": 14,
+      "D": 2,
+      "m": 4,
+      "B": 9,
+      "causal": true,
+      "delta": "2/3",
+      "coverage": "1/3",
+      "primal_rows": 1001,
+      "dual_columns": 252,
+      "schedule_support": 3,
+      "input_support": 3
+    }
+  ],
+  "original_certificates": 8,
+  "added_certificates": 8,
+  "certificates": 16,
+  "original_primal_rows_checked": 1064,
+  "added_primal_rows_checked": 3672,
+  "original_dual_columns_checked": 421,
+  "added_dual_columns_checked": 3603,
+  "primal_rows_checked": 4736,
+  "dual_columns_checked": 4024,
+  "table_rows": [
+    {
+      "selection": "original",
+      "H": 8,
+      "D": 1,
+      "m": 3,
+      "B": 5,
+      "delta_off": "1/2",
+      "delta_on": "1",
+      "coverage_off": "1/2",
+      "coverage_on": "0",
+      "primal_rows": 56,
+      "offline_columns": 56,
+      "causal_columns": 10,
+      "offline_schedule_support": 6,
+      "causal_schedule_support": 1,
+      "offline_input_support": 2,
+      "causal_input_support": 1
+    },
+    {
+      "selection": "original",
+      "H": 8,
+      "D": 2,
+      "m": 3,
+      "B": 4,
+      "delta_off": "1/2",
+      "delta_on": "1",
+      "coverage_off": "1/2",
+      "coverage_on": "0",
+      "primal_rows": 56,
+      "offline_columns": 70,
+      "causal_columns": 5,
+      "offline_schedule_support": 2,
+      "causal_schedule_support": 1,
+      "offline_input_support": 2,
+      "causal_input_support": 1
+    },
+    {
+      "selection": "original",
+      "H": 10,
+      "D": 1,
+      "m": 4,
+      "B": 7,
+      "delta_off": "1/2",
+      "delta_on": "1",
+      "coverage_off": "1/2",
+      "coverage_on": "0",
+      "primal_rows": 210,
+      "offline_columns": 120,
+      "causal_columns": 20,
+      "offline_schedule_support": 8,
+      "causal_schedule_support": 1,
+      "offline_input_support": 2,
+      "causal_input_support": 1
+    },
+    {
+      "selection": "original",
+      "H": 10,
+      "D": 2,
+      "m": 4,
+      "B": 7,
+      "delta_off": "1/2",
+      "delta_on": "1",
+      "coverage_off": "1/2",
+      "coverage_on": "0",
+      "primal_rows": 210,
+      "offline_columns": 120,
+      "causal_columns": 20,
+      "offline_schedule_support": 4,
+      "causal_schedule_support": 1,
+      "offline_input_support": 2,
+      "causal_input_support": 1
+    },
+    {
+      "selection": "added",
+      "H": 10,
+      "D": 1,
+      "m": 3,
+      "B": 7,
+      "delta_off": "1/3",
+      "delta_on": "1/2",
+      "coverage_off": "2/3",
+      "coverage_on": "1/2",
+      "primal_rows": 120,
+      "offline_columns": 120,
+      "causal_columns": 35,
+      "offline_schedule_support": 3,
+      "causal_schedule_support": 2,
+      "offline_input_support": 3,
+      "causal_input_support": 2
+    },
+    {
+      "selection": "added",
+      "H": 12,
+      "D": 2,
+      "m": 3,
+      "B": 7,
+      "delta_off": "1/3",
+      "delta_on": "1/2",
+      "coverage_off": "2/3",
+      "coverage_on": "1/2",
+      "primal_rows": 220,
+      "offline_columns": 792,
+      "causal_columns": 126,
+      "offline_schedule_support": 3,
+      "causal_schedule_support": 2,
+      "offline_input_support": 3,
+      "causal_input_support": 2
+    },
+    {
+      "selection": "added",
+      "H": 12,
+      "D": 1,
+      "m": 4,
+      "B": 9,
+      "delta_off": "2/5",
+      "delta_on": "2/3",
+      "coverage_off": "3/5",
+      "coverage_on": "1/3",
+      "primal_rows": 495,
+      "offline_columns": 220,
+      "causal_columns": 56,
+      "offline_schedule_support": 10,
+      "causal_schedule_support": 3,
+      "offline_input_support": 4,
+      "causal_input_support": 3
+    },
+    {
+      "selection": "added",
+      "H": 14,
+      "D": 2,
+      "m": 4,
+      "B": 9,
+      "delta_off": "2/5",
+      "delta_on": "2/3",
+      "coverage_off": "3/5",
+      "coverage_on": "1/3",
+      "primal_rows": 1001,
+      "offline_columns": 2002,
+      "causal_columns": 252,
+      "offline_schedule_support": 13,
+      "causal_schedule_support": 3,
+      "offline_input_support": 4,
+      "causal_input_support": 3
+    }
+  ],
+  "all_passed": true
+}

@@ -1,0 +1,70 @@
+{
+  "inherited_research_files": {
+    "FRONTIERS.json": "203bb3cb3eaf0f15cf5a14ad9e9960edd4233794232e989fd33053c6d0bca265",
+    "covering.py": "f78e8d516d7d775fdc2f8e2473fb7845c895b7b5d5483d17c17470eabd4eb4f5",
+    "check_certificates.py": "0d2f036157713a835c51177f22c7eca7cc4ae8bb80798a4cb83efa7be231acbf",
+    "novelty-review/coordinator/fallback_check.py": "baad0afa4ab89b2ab6b41f7d945fa57dbd4a5b576b2f2ffcc8bfdd6fea5250bf",
+    "priority-assessment/coordinator/quantitative_check.py": "36e130da062b1fb78442948366073bd5066406a25f689eb1ccdca7c8e23a2e6c"
+  },
+  "unchanged": [
+    "FRONTIERS.json",
+    "fallback_check.py"
+  ],
+  "adaptations": [
+    "covering.py: removed two unused older execution functions; LP and certification unchanged",
+    "independent_certificate_check.py: retained matcher and checker; standalone 79-record entry point and explicit example",
+    "quantitative_check.py: local paths and descriptive text only"
+  ],
+  "final_revision": {
+    "date": "2026-09-10",
+    "manuscripts": "Two alternative language versions of one study",
+    "unchanged_numerical_core": [
+      "FRONTIERS.json",
+      "covering.py",
+      "fallback_check.py",
+      "quantitative_check.py",
+      "independent_certificate_check.py"
+    ],
+    "added_checker": "zero_delay_independent_check.py",
+    "added_checker_origin": "Adapted from the independent coordinator zero_delay_exact_check.py of the completed 60-review audit; only the saved-report path changed",
+    "added_checker_sha256": "60934888ca21fcb727c5abb65e31ac775fa53d6a37434f1a13f8bb24c2231477",
+    "fresh_release_checks": [
+      "independent_certificate_check.py",
+      "fallback_check.py",
+      "zero_delay_independent_check.py"
+    ],
+    "fresh_log": "verification-final.log",
+    "previous_log": "verification.log records the preceding manuscript release",
+    "release_context": "Historical preparation preceding r4"
+  },
+  "r4_revision": {
+    "date": "2026-09-10",
+    "new_positive_delay_certificates": 16,
+    "total_positive_delay_certificates": 95,
+    "new_no_savings_parameter_checks": 375,
+    "new_checker_files": [
+      "verify_extra.py",
+      "no_savings_check.py"
+    ],
+    "new_solver_driver": "regenerate_extra.py",
+    "earlier_large_checks_repeated": false,
+    "inherited_r3_files_sha256": {
+      "CERTIFICATE-CHECK.json": "a343decb39c816d3ddebac0956e0bceb470f9ded75a954afa833fbe6d80a65e6",
+      "ENVIRONMENT.json": "dab30b6a4ec3834558cc6d5d22184e8db6f6c20550da760a2b892354c514ce34",
+      "FALLBACK-CHECK.json": "a6062279f78170fb2e4a99d18c94e9bad2b870b280bf548f03e3591ee587aa34",
+      "FRONTIERS.json": "203bb3cb3eaf0f15cf5a14ad9e9960edd4233794232e989fd33053c6d0bca265",
+      "QUANTITATIVE-CHECK.json": "e95f04a80b7c0a9e84da17ee0f5541b93af1487b8cf26bed0237031d86e01f0a",
+      "TABLE-1.csv": "0068c5a807df76ba98e0eb4025dd66b47bdaecc828fd2ae8b3150a76681c9d24",
+      "ZERO-DELAY-EXACT-CHECK.json": "c4bc910d03a82f835a444bed73ae337e1241f1c48091a6494290770761c3b7b8",
+      "covering.py": "c9efe69517f6916a82db81b9338299ddf0b629e602281a119b60b9e82b5a220c",
+      "fallback_check.py": "baad0afa4ab89b2ab6b41f7d945fa57dbd4a5b576b2f2ffcc8bfdd6fea5250bf",
+      "independent_certificate_check.py": "e719e74accc873b43b8f1f19bddf473f4cbdf4725a9edf1ad3b725c8f6557145",
+      "quantitative_check.py": "36ae461ee91bf5308acba4d6ca5a999a0141d3febd0aa398deebaad105a7cd42",
+      "regenerate_frontiers.py": "f4d08870e3c1d9c79f6d48fb9346340ea47d360f09506de8b7cf8c6326b39e3b",
+      "requirements.txt": "6e69ffe6f7841e5d8aea3f05a4bf77c60055d3b0717fcccbb31fd19647e07b7b",
+      "verification-final.log": "5321134b0d8da8a1c1133ef036d9c2996b7e20a1d722a41f63cd1e14639cc00a",
+      "verification.log": "83c1d38820b6ea00442235fd04d9f723a38c415e677a8b9dcfd6d278c77d0500",
+      "zero_delay_independent_check.py": "60934888ca21fcb727c5abb65e31ac775fa53d6a37434f1a13f8bb24c2231477"
+    }
+  }
+}

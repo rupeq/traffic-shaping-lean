@@ -1,0 +1,16 @@
+{
+  "purpose": "r4 extra positive-delay certificate generation and verification",
+  "python_executable": "/Users/artem.derevago/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "solver_dependency_path": "/private/tmp/manuscript-science-packages",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "generation_scope": "8 stored original certificates preserved and rechecked; 8 LPs freshly solved for four added (H,D,m,B) tuples, each causal and offline",
+  "independent_verifier_dependencies": "Python standard library only",
+  "old_frontier_lp_count": 0,
+  "full_old_certificate_check_count": 0,
+  "original_counts": "8 certificates, 1064 primal rows, 421 dual columns",
+  "added_counts": "8 certificates, 3672 primal rows, 3603 dual columns",
+  "total_counts": "16 certificates, 4736 primal rows, 4024 dual columns",
+  "finite_example_note": "The checked row and column totals describe finite game matrices; they are not scalability benchmarks."
+}

@@ -1,0 +1,45 @@
+{
+  "aggregate_counts": {
+    "B_lt_m_impossibility_checks": 1485,
+    "Y_B_intersection_checks_for_B_lt_B0": 1755,
+    "input_checks_at_reserve": 52158,
+    "output_traces_across_instances": 83966,
+    "structural_feasible_trace_checks": 55114
+  },
+  "boundary_certificate": {
+    "B": 1,
+    "B0": 2,
+    "B_lt_B0": true,
+    "D": 0,
+    "H": 2,
+    "K": 2,
+    "class": "noncausal",
+    "delta": "1/2",
+    "delta_equals_1_over_K": true,
+    "epsilon": 0,
+    "m": 1
+  },
+  "checker": "no_savings_check.py",
+  "checks": [
+    "feasible test traces contain the required count in their own block",
+    "Y_B intersection of all test-feasibility events is empty for every B<B0",
+    "the fixed terminal-reserve schedule is feasible for every input of weight at most m",
+    "every B<m is impossible"
+  ],
+  "scope": {
+    "D_ge_H_equivalent_after_deadline_truncation": true,
+    "D_range_inclusive": [
+      0,
+      10
+    ],
+    "H_max": 9,
+    "all_inputs_of_weight_at_most_m_enumerated": true,
+    "all_output_traces_enumerated": true,
+    "m_range": [
+      1,
+      9
+    ],
+    "parameter_sets": 375
+  },
+  "status": "PASS"
+}

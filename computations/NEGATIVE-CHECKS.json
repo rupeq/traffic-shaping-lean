@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "checked_on": "2026-09-10T20:23:28.920653+00:00",
+  "checker": "independent_certificate_check.py",
+  "method": "Each mutation was applied only to a temporary copy of computations/.",
+  "cases": [
+    {
+      "name": "primal-weight-normalization",
+      "mutation": "Changed one saved schedule weight from 1/10 to 1/5; the primal weights sum to 11/10.",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+        "-S",
+        "independent_certificate_check.py"
+      ],
+      "status": "PASS",
+      "exit_code": 1,
+      "failure_observed": "AssertionError"
+    },
+    {
+      "name": "claimed-certificate-value",
+      "mutation": "Changed certificate coverage from 1/10 to 1/9 and delta to 8/9; the claimed relation remains consistent.",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+        "-S",
+        "independent_certificate_check.py"
+      ],
+      "status": "PASS",
+      "exit_code": 1,
+      "failure_observed": "AssertionError"
+    }
+  ],
+  "permanent_certificate_files_unchanged": true,
+  "permanent_certificate_sha256_before": {
+    "FRONTIERS.json": "203bb3cb3eaf0f15cf5a14ad9e9960edd4233794232e989fd33053c6d0bca265",
+    "EXTRA-CERTIFICATES.json": "f414f8d60f2cd3e673d649341445c55b58c89f23a0dce5bc304877b28ff12518"
+  },
+  "permanent_certificate_sha256_after": {
+    "FRONTIERS.json": "203bb3cb3eaf0f15cf5a14ad9e9960edd4233794232e989fd33053c6d0bca265",
+    "EXTRA-CERTIFICATES.json": "f414f8d60f2cd3e673d649341445c55b58c89f23a0dce5bc304877b28ff12518"
+  }
+}

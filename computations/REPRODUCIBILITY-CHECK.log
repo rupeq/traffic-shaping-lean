@@ -1,0 +1,25 @@
+R4 computations clean reproducibility run
+Date: 2026-09-10
+Source previous PASS logs used as evidence: no
+Source data/scripts unchanged after temporary-copy run: yes
+
+Command:
+python -S run_checks.py --outputdir ../traffic-shaping-computations-full --full-regenerate
+
+Fresh standard-library checks in a clean copy:
+- 79 legacy positive-delay certificates: PASS (0.746289 s)
+- 16 r4 positive-delay certificates: PASS (0.109410 s)
+- fallback algorithm: PASS; 546 cases, 45,622 pairs, 4,069 switches,
+  347,870 prefix checks, 20,532 TV checks (0.347057 s)
+- zero-delay independent check: PASS; 240 cases, 4,518 primal rows,
+  2,295 dual columns (0.040824 s)
+- no-savings check: PASS; 375 parameter sets (2.552733 s)
+
+Fresh full LP reproduction:
+- 95/95 exact coverage and delta values matched (support sets ignored).
+- 79 FRONTIERS records plus 16 r4 records.
+- solver subprocess: 9.842305 s; internal fresh solve/check: 9.842305 s.
+
+Aggregate positive-delay matrix dimensions: 10,356 primal rows and 39,931
+schedule columns. This is a finite verification package, not a scalability
+benchmark.
