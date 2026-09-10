@@ -2,3 +2,5 @@
 computations/** -text
 # Python's CSV writer uses the standard CRLF record terminator.
 computations/*.csv whitespace=cr-at-eol
+# Keep captured tool logs byte-exact, including their original whitespace.
+verification/*.log -text -whitespace

@@ -10,9 +10,11 @@ The `computations/` directory contains the original optimization code, 95 positi
 
 ## Formalization status
 
-Lean work is in progress. The finite model, probability and total-variation lemmas, finite-game attainment and certificate theorem, and terminal saturation lemmas compile successfully. Their [axiom audit](verification/FOUNDATIONS-CHECK.json) uses only the standard logical axioms of Lean. No complete Lean verification of the manuscript is claimed at this stage. The intended sequence is reproducible computations, proofs of the service lemmas and algorithm, and the full optimality theorem over causal and noncausal mechanisms. Finite numerical checks alone do not prove the general theorem.
+Lean work is in progress. The default `lake build` now checks the finite foundations, the equivalence of greedy matching and feasibility, both universal converse bounds, the repair total-variation identity, and the **complete noncausal optimum**, including attainment and independence of every finite nonnegative epsilon. The least-element and infimum statements are `noncausal_optimum_isLeast` and `noncausal_optimum_eq` in [MainTheorem.lean](formal/TrafficShaping/MainTheorem.lean).
 
-The formal development pins Lean and mathlib versions and will record the correspondence between manuscript claims and checked theorem declarations. The final verification will reject unfinished proofs and inspect the axioms used by the principal results. See [the pinned environment](docs/TOOLCHAIN.md).
+The causal construction and causal optimum are not yet complete. They are the remaining formalization task; the verified causal converse alone does not establish causal attainment. The [current verification record](verification/NONCAUSAL-OPTIMUM-CHECK.json) and [semantic audit](review/ACHIEVABILITY-SEMANTIC-AUDIT.md) state this scope explicitly. All 13 audited declarations use only `propext`, `Classical.choice`, and `Quot.sound`, with no unfinished-proof dependency or additional axiom.
+
+Use the [pinned environment](docs/TOOLCHAIN.md), run `lake build` in `formal/`, then run `lake env lean AuditNoncausal.lean` to inspect the dependencies of the principal checked results. Finite numerical checks and a successful build of a subset of modules are not treated as a proof of the full causal theorem.
 
 ## Mathematical scope
 

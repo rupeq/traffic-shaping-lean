@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "scope": "both converse bounds and complete noncausal optimum; causal attainment is still under development",
+  "created_at_utc": "2026-09-10T20:50:34.210677+00:00",
+  "noncausal_optimum_complete": true,
+  "causal_optimum_complete": false,
+  "full_optimality_proof_complete": false,
+  "lean": "4.33.1",
+  "commands": [
+    {
+      "command": "lake build",
+      "exit_code": 0,
+      "log": "noncausal-build.log"
+    },
+    {
+      "command": "lake env lean AuditNoncausal.lean",
+      "exit_code": 0,
+      "log": "noncausal-axioms.log"
+    }
+  ],
+  "axiom_checked_declarations": 13,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "unfinished_proof_or_extra_axiom_detected": false,
+  "source_sha256": {
+    "formal/TrafficShaping/Model.lean": "c9d1cd2be55c5fa376748488b0944b05544aff5d90d16981638381558a4d9234",
+    "formal/TrafficShaping/Law.lean": "589f17f5ea7c5a8fc03b9318ddd587de26ed0752f8cabdaf63eaa3ac271ef20a",
+    "formal/TrafficShaping/Game.lean": "5a9480ef991557757cc05bc6716667b6e5915291cf6c6aae3b501d6dc7627219",
+    "formal/TrafficShaping/Saturation.lean": "4ed47107d569232bd5f6b33749f17478717297ff30c6b4cf2243d579447bceba",
+    "formal/TrafficShaping/Matching.lean": "73d0d2b27f8fb8a67e23ab3f01d1d065959b9b3efcc9ab4d420dc6e7ed523886",
+    "formal/TrafficShaping/Mechanism.lean": "db83ebfde4cc45fc5829d7b0c505b7c0246147bed4d6609051eb7b81675e0c68",
+    "formal/TrafficShaping/Converse.lean": "488f4d0f7bb97101d93a015923b5bd156e90a7112926a39ee660874609811fd3",
+    "formal/TrafficShaping/Achievability.lean": "51389e552911521759de30d4b920fcbcaaea3964d8659d6c082c98c3374058b0",
+    "formal/TrafficShaping/MainTheorem.lean": "b634cd438322ffec7a4078ac5f8243a56d52dcc3a9e5b952698905a80402af2c",
+    "formal/TrafficShaping.lean": "9c878584dd41de28c2a71bbc02877dbdb9ed051298dce23415de9368d1388698",
+    "formal/AuditNoncausal.lean": "e791143c981e1ab9e97aaccd6518a2346b017638ca7ac2b3090663c19603de73"
+  },
+  "evidence_sha256": {
+    "noncausal-build.log": "0c43a741689455b35562a356c5f2e0777336606f1ba09039ff5de1f5b171cfe1",
+    "noncausal-axioms.log": "3612981c04467ea3eab1d2f0cdc9174295927c49533418a435ed8f4dbc5cfff3"
+  }
+}
