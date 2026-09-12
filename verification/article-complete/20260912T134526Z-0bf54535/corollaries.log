@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "output": "/Users/artem.derevago/master_thesis/work/new-topic-2026-09-09/article-1-lean-completion-2026-09-11/verification/20260912T134526Z-0bf54535/computations/COROLLARIES-CHECK.json",
+  "corollary_parameter_sets": {
+    "corollary_1_budget": 1707,
+    "corollary_2_privacy_gap": 1022,
+    "corollary_3_full_indistinguishability": 428,
+    "corollary_4_zero_delay": 244,
+    "corollary_5_no_savings_threshold": 168
+  },
+  "article_example": "PASS",
+  "privacy_interpretation": "PASS",
+  "article_sizes": "PASS",
+  "saved_table_mapping": "PASS"
+}

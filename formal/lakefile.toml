@@ -9,3 +9,5 @@ rev = "v4.33.1"
 
 [[lean_lib]]
 name = "TrafficShaping"
+# Exact certificates reduce sequentially; cap each compiler's memory in MiB.
+weakLeanArgs = ["-j1", "-M8192"]

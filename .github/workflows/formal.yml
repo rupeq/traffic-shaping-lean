@@ -1,10 +1,19 @@
-name: Check Lean formalization
+name: Check article proofs and exact corollaries
 
 on:
   push:
     paths:
       - 'formal/**'
       - 'verify_formal.py'
+      - 'verify_article.py'
+      - 'tests/**'
+      - 'computations/corollaries_check.py'
+      - 'computations/generate_lean_certificates.py'
+      - 'computations/table_consistency_check.py'
+      - 'computations/FRONTIERS.json'
+      - 'computations/EXTRA-CERTIFICATES.json'
+      - 'computations/TABLE-1.csv'
+      - 'computations/TABLE-3.csv'
       - '.github/scripts/audit_formal.py'
       - '.github/workflows/formal.yml'
       - 'docs/TOOLCHAIN.md'
@@ -13,6 +22,15 @@ on:
     paths:
       - 'formal/**'
       - 'verify_formal.py'
+      - 'verify_article.py'
+      - 'tests/**'
+      - 'computations/corollaries_check.py'
+      - 'computations/generate_lean_certificates.py'
+      - 'computations/table_consistency_check.py'
+      - 'computations/FRONTIERS.json'
+      - 'computations/EXTRA-CERTIFICATES.json'
+      - 'computations/TABLE-1.csv'
+      - 'computations/TABLE-3.csv'
       - '.github/scripts/audit_formal.py'
       - '.github/workflows/formal.yml'
       - 'docs/TOOLCHAIN.md'
@@ -25,7 +43,7 @@ permissions:
 jobs:
   formal:
     runs-on: ubuntu-24.04
-    timeout-minutes: 30
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
 
@@ -50,13 +68,13 @@ jobs:
           lean --version | grep -Fq 'Lean (version 4.33.1'
           lake exe cache get
 
-      - name: Build and audit the complete formal source
-        run: python3 verify_formal.py --output-dir .check-output/formal
+      - name: Check every article proof and exact computational witness
+        run: python3 verify_article.py --output-dir .check-output/article
 
       - name: Show build and kernel audit evidence
         if: always()
         run: |
-          for report in .check-output/formal/full-optimum-build.log .check-output/formal/full-optimum-axioms.log .check-output/formal/full-optimum-audit.log; do
+          for report in .check-output/article/ARTICLE-CHECK.json .check-output/article/*/*.log .check-output/article/*/formal/*.log; do
             if test -f "$report"; then
               cat "$report"
             fi

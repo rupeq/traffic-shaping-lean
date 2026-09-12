@@ -17,36 +17,41 @@ from immutable `leanprover/elan` commit
 existing manifest with `lake exe cache get` and runs `lake build`. It does not
 run `lake update`, so CI does not silently move a dependency revision.
 
-The final build step runs `lake env lean Audit.lean` and saves its output. The
-following audit enforces two independent conditions:
+The main verification step runs `python3 verify_article.py`. It checks the
+regression tests, reproduction of the Lean certificates from the rational
+inputs, the full Lean build and axiom audit, the independent exact
+corollary checks, and the saved rational certificates and table derivations.
+The [article verification guide](ARTICLE-VERIFICATION.md) describes the
+combined evidence record.
 
-1. It scans `formal/TrafficShaping.lean`, every Lean file below
-   `formal/TrafficShaping/`, and `formal/Audit.lean` after removing nested
-   block comments, line comments, string literals, and quoted identifiers.
-   Exact source tokens `axiom`, `sorry`, `sorryAx`, `admit`, `unsafe`, and
-   `native_decide` fail the check. This avoids treating prose or commented
-   examples as declarations.
-2. It extracts every active `#print axioms` command from `formal/Audit.lean`
-   and matches it against the kernel's `depends on axioms: [...]` lines in the
-   saved Lean output. Duplicate, missing, or extra commands/reports fail the
-   check. The final inventory must include both
-   `TrafficShaping.noncausal_optimum_eq` and
-   `TrafficShaping.causal_optimum_eq`. Only Lean's standard logical axioms
-   `propext`, `Classical.choice`, and `Quot.sound` are allowed. Missing axiom
-   reports, `sorryAx`, `sorry`, `admit`, or any other axiom name fail the job.
+The formal audit enforces three separate conditions:
 
-`formal/Audit.lean` is the final 29-declaration theorem inventory and is a
-required CI input. It includes both complete optimum theorems, their
-least-element and epsilon-independence statements, and the concrete causal
-execution results. Run `python3 verify_formal.py` from the repository root for
-the equivalent local build and audit sequence. The wrapper writes all command
-logs and `FULL-OPTIMUM-CHECK.json`, including before/after source hashes. It
-returns a nonzero exit status if any command fails, any pinned input differs,
-or the formal sources change during verification.
+1. Every Lean source in the proof tree and all top-level Lean files are
+   scanned after removing comments, strings, and quoted identifiers. Exact
+   source tokens `axiom`, `sorry`, `sorryAx`, `admit`, `unsafe`, and
+   `native_decide` fail the check. Every proof module must be reachable from
+   the root import; unexpected scratch modules also fail the check.
+2. The 67 required article items must each have named declarations in
+   `formal/article-coverage.json`, and every declaration must appear in the
+   active `#print axioms` commands in `formal/Audit.lean`. A missing formula,
+   corollary, supporting consequence, or table row fails the check. The
+   inventory tests presence; the accompanying semantic reviews check that
+   the propositions express the intended article statements.
+3. Every audit command must have exactly one matching kernel report. Both
+   `depends on axioms: [...]` and `does not depend on any axioms` are parsed.
+   Duplicate, missing, or extra reports fail the check. Only `propext`,
+   `Classical.choice`, and `Quot.sound` are allowed.
 
-The saved `verification/full-optimum-axioms.log` contains the 29 actual kernel
-reports from the complete local verification. A successful remote CI run is
-recorded separately after GitHub finishes checking the committed sources.
+The wrapper writes a fresh run directory and records the before/after hashes
+of the proof sources, audit and checker code, and saved certificate inputs.
+The combined record remains `RUNNING` until it is replaced by `PASS` or
+`FAIL`; source changes or incomplete subreports prevent a pass. The older
+`verification/FULL-OPTIMUM-CHECK.json` and its 29 kernel reports remain a
+historical checkpoint for the source revision that they record.
+
+The workflow definition is prepared locally. A successful remote run for the
+article-completion revision must be recorded separately after GitHub checks
+that revision; the earlier main-theorem CI run does not certify new sources.
 
 The workflow follows the Lean installation/build flow and GitHub's action
 security guidance:

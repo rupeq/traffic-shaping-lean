@@ -1,0 +1,568 @@
+{
+  "schema_version": 1,
+  "article_revision": "r9 (11 September 2026)",
+  "article_source_sha256": {
+    "russian": "ecf43cb7fb43a0adab74225730a0a326be301a5b69240cccccdb0e47c7767586",
+    "english": "743428c10d5a9d3203e1019a253220db23af1798f150508a62feb415302c1d48"
+  },
+  "scope": "Own mathematical statements of the article; definitions are distinguished by their labels. Literature attributions and reported program-run counts are documented by the separate source and exact-code audit.",
+  "items": [
+    {
+      "id": "equation-01",
+      "label": "Slot delivery deadline",
+      "declarations": [
+        "TrafficShaping.Feasible",
+        "TrafficShaping.deadline"
+      ]
+    },
+    {
+      "id": "equation-02",
+      "label": "Two-sided participation privacy",
+      "declarations": [
+        "TrafficShaping.Private",
+        "TrafficShaping.Law.PrivatePair"
+      ]
+    },
+    {
+      "id": "equation-03",
+      "label": "Total variation and zero-epsilon equivalence",
+      "declarations": [
+        "TrafficShaping.Law.tv",
+        "TrafficShaping.Law.privatePair_zero_iff_tv"
+      ]
+    },
+    {
+      "id": "equation-04",
+      "label": "Noncausal exact-budget schedules",
+      "declarations": [
+        "TrafficShaping.OffSchedule"
+      ]
+    },
+    {
+      "id": "equation-05",
+      "label": "Causal schedules with terminal reserve",
+      "declarations": [
+        "TrafficShaping.OnSchedule",
+        "TrafficShaping.terminal"
+      ]
+    },
+    {
+      "id": "equation-06",
+      "label": "Attained finite covering-game value",
+      "declarations": [
+        "TrafficShaping.coverage",
+        "TrafficShaping.worst",
+        "TrafficShaping.value",
+        "TrafficShaping.value_attained"
+      ]
+    },
+    {
+      "id": "equation-07",
+      "label": "Primal covering linear program",
+      "declarations": [
+        "TrafficShaping.value_attained",
+        "TrafficShaping.off_exists_strongly_optimal",
+        "TrafficShaping.on_exists_strongly_optimal"
+      ]
+    },
+    {
+      "id": "equation-08",
+      "label": "Dual linear program",
+      "declarations": [
+        "TrafficShaping.dualValue",
+        "TrafficShaping.dual_value_isLeast",
+        "TrafficShaping.off_strong_duality",
+        "TrafficShaping.on_strong_duality",
+        "TrafficShaping.matching_certificate"
+      ]
+    },
+    {
+      "id": "equation-09",
+      "label": "Exact causal and noncausal optima",
+      "declarations": [
+        "TrafficShaping.noncausal_optimum_eq",
+        "TrafficShaping.causal_optimum_eq",
+        "TrafficShaping.both_optima_attained_at_zero"
+      ]
+    },
+    {
+      "id": "equation-10",
+      "label": "Empty-law mass of the forbidden feasibility event",
+      "declarations": [
+        "TrafficShaping.eq10_feasible_complement_le_delta"
+      ]
+    },
+    {
+      "id": "equation-11",
+      "label": "Almost-sure empty-prefix reserve bound",
+      "declarations": [
+        "TrafficShaping.eq11_empty_prefix_cap_mass_one"
+      ]
+    },
+    {
+      "id": "equation-12",
+      "label": "Terminal FIFO service times and deadlines",
+      "declarations": [
+        "TrafficShaping.terminal_actual_fifo_eq12",
+        "TrafficShaping.fifoServices_get_eq_max"
+      ]
+    },
+    {
+      "id": "equation-13",
+      "label": "Post-switch FIFO service times and deadlines",
+      "declarations": [
+        "TrafficShaping.switch_actual_fifo_eq13",
+        "TrafficShaping.fifoServices_get_eq_max"
+      ]
+    },
+    {
+      "id": "equation-14",
+      "label": "Exact repair total variation",
+      "declarations": [
+        "TrafficShaping.onMechanism_tv",
+        "TrafficShaping.repairMechanism_tv"
+      ]
+    },
+    {
+      "id": "equation-15",
+      "label": "Additive budget bounds",
+      "declarations": [
+        "TrafficShaping.corollary1_real_difference_bounds",
+        "TrafficShaping.corollary1_budget_bounds"
+      ]
+    },
+    {
+      "id": "equation-16",
+      "label": "Binomial thinning factor",
+      "declarations": [
+        "TrafficShaping.privacyRho"
+      ]
+    },
+    {
+      "id": "equation-17",
+      "label": "Coverage comparison after input-independent thinning",
+      "declarations": [
+        "TrafficShaping.onGameValue_ge_rho_mul_offGameValue",
+        "TrafficShaping.thinning_mass_lower"
+      ]
+    },
+    {
+      "id": "equation-18",
+      "label": "Semantic privacy gap bounds",
+      "declarations": [
+        "TrafficShaping.privacy_gap_bounds"
+      ]
+    },
+    {
+      "id": "equation-19",
+      "label": "Exact survival probability",
+      "declarations": [
+        "TrafficShaping.eq19_binomial_identity",
+        "TrafficShaping.thinContainment_mass",
+        "TrafficShaping.thinningOutput_feasible"
+      ]
+    },
+    {
+      "id": "equation-20",
+      "label": "Minimum perfect-privacy budget",
+      "declarations": [
+        "TrafficShaping.corollary3_eq20",
+        "TrafficShaping.perfectSchedule_card",
+        "TrafficShaping.perfectSchedule_feasible",
+        "TrafficShaping.perfect_privacy_mechanism_budget_lower"
+      ]
+    },
+    {
+      "id": "equation-21",
+      "label": "Both zero-delay formulas",
+      "declarations": [
+        "TrafficShaping.zero_delay_offGameValue",
+        "TrafficShaping.zero_delay_onGameValue",
+        "TrafficShaping.zero_delay_onGameValue_zero_of_lt"
+      ]
+    },
+    {
+      "id": "equation-22",
+      "label": "Exact one-arrival zero-delay gap",
+      "declarations": [
+        "TrafficShaping.zero_delay_m_one_gap",
+        "TrafficShaping.zero_delay_m_one_optimum_gap"
+      ]
+    },
+    {
+      "id": "equation-23",
+      "label": "Explicit matched positive-delay certificate",
+      "declarations": [
+        "TrafficShaping.articleCausalPolicyItems_sum",
+        "TrafficShaping.articleCausalDualItems_sum",
+        "TrafficShaping.articleCausalPolicy_all_inputs",
+        "TrafficShaping.articleCausalDual_cols",
+        "TrafficShaping.articleCausalValue",
+        "TrafficShaping.articleNoncausalValue",
+        "TrafficShaping.articleCausalOptimum",
+        "TrafficShaping.articleNoncausalOptimum",
+        "TrafficShaping.articlePerfectPrivacyB6",
+        "TrafficShaping.articlePerfectScheduleB6"
+      ]
+    },
+    {
+      "id": "equation-24",
+      "label": "No-savings lower bound",
+      "declarations": [
+        "TrafficShaping.corollary5_eq24",
+        "TrafficShaping.testBlockCount_eq_real_ceil"
+      ]
+    },
+    {
+      "id": "equation-25",
+      "label": "Minimum budgets in the strict no-savings interval",
+      "declarations": [
+        "TrafficShaping.corollary5_eq25_unconditional"
+      ]
+    },
+    {
+      "id": "equation-26",
+      "label": "Explicit bad-event union probability and sum chain",
+      "declarations": [
+        "TrafficShaping.block_noSavings_eq26_chain",
+        "TrafficShaping.testBlockCount_eq_real_ceil"
+      ]
+    },
+    {
+      "id": "lemma-1",
+      "label": "Greedy matching correctness and sorted scan cost",
+      "declarations": [
+        "TrafficShaping.greedy_true_iff_feasible",
+        "TrafficShaping.scan_true_iff_feasible",
+        "TrafficShaping.scan_ops_le_five_mul_H"
+      ]
+    },
+    {
+      "id": "lemma-2",
+      "label": "Terminal feasibility forces reserve slots",
+      "declarations": [
+        "TrafficShaping.terminal_subset_of_feasible",
+        "TrafficShaping.prefix_card_le_sub_of_terminal_feasible"
+      ]
+    },
+    {
+      "id": "lemma-3",
+      "label": "Concrete causal execution delivery and hard cap",
+      "declarations": [
+        "TrafficShaping.onRepair_feasible",
+        "TrafficShaping.executeState_served_eq",
+        "TrafficShaping.execute_cap",
+        "TrafficShaping.execute_causal"
+      ]
+    },
+    {
+      "id": "lemma-4",
+      "label": "Preservation of feasible base schedules",
+      "declarations": [
+        "TrafficShaping.execute_eq_of_feasible"
+      ]
+    },
+    {
+      "id": "theorem-1",
+      "label": "All mechanisms: converse, attained optimum and epsilon independence",
+      "declarations": [
+        "TrafficShaping.noncausal_converse_bound",
+        "TrafficShaping.causal_converse_bound",
+        "TrafficShaping.noncausal_optimum_eq",
+        "TrafficShaping.causal_optimum_eq",
+        "TrafficShaping.both_optima_attained_at_zero"
+      ]
+    },
+    {
+      "id": "corollary-1",
+      "label": "Additive budget penalty and ratio",
+      "declarations": [
+        "TrafficShaping.corollary1_real_difference_bounds",
+        "TrafficShaping.corollary1_budget_bounds",
+        "TrafficShaping.corollary1_ratio_le_two",
+        "TrafficShaping.corollary1_sharpness"
+      ]
+    },
+    {
+      "id": "corollary-2",
+      "label": "Uniform same-budget privacy comparison",
+      "declarations": [
+        "TrafficShaping.onGameValue_ge_rho_mul_offGameValue",
+        "TrafficShaping.privacy_gap_bounds"
+      ]
+    },
+    {
+      "id": "corollary-3",
+      "label": "Perfect privacy at the exact common minimum budget",
+      "declarations": [
+        "TrafficShaping.corollary3_perfect_privacy_budgets",
+        "TrafficShaping.corollary3_eq20",
+        "TrafficShaping.perfect_privacy_both_attainable",
+        "TrafficShaping.perfect_privacy_mechanism_budget_lower"
+      ]
+    },
+    {
+      "id": "corollary-4",
+      "label": "Zero delay, including degenerate prefix and one arrival",
+      "declarations": [
+        "TrafficShaping.zero_delay_offGameValue",
+        "TrafficShaping.zero_delay_onGameValue",
+        "TrafficShaping.zero_delay_onGameValue_zero_of_lt",
+        "TrafficShaping.zero_delay_m_one_optimum_gap"
+      ]
+    },
+    {
+      "id": "corollary-5",
+      "label": "Strict no-savings interval and endpoint exclusion",
+      "declarations": [
+        "TrafficShaping.corollary5_eq24",
+        "TrafficShaping.corollary5_eq25_unconditional",
+        "TrafficShaping.block_noSavings_eq26_chain"
+      ]
+    },
+    {
+      "id": "budget-impossibility",
+      "label": "No admissible mechanism when the cap is below workload",
+      "declarations": [
+        "TrafficShaping.mechanism_impossible_of_budget_lt"
+      ]
+    },
+    {
+      "id": "epsilon-independence",
+      "label": "Exact optima are independent of finite nonnegative epsilon",
+      "declarations": [
+        "TrafficShaping.noncausal_optimum_epsilon_independent",
+        "TrafficShaping.causal_optimum_epsilon_independent"
+      ]
+    },
+    {
+      "id": "full-input-reduction",
+      "label": "All active input rows reduce exactly to full-weight rows",
+      "declarations": [
+        "TrafficShaping.full_row_reduction",
+        "TrafficShaping.activeRowMinimum_eq_worst"
+      ]
+    },
+    {
+      "id": "finite-game-duality",
+      "label": "Strong duality and matching optimal primal-dual laws",
+      "declarations": [
+        "TrafficShaping.off_strong_duality",
+        "TrafficShaping.on_strong_duality",
+        "TrafficShaping.off_exists_strongly_optimal",
+        "TrafficShaping.on_exists_strongly_optimal"
+      ]
+    },
+    {
+      "id": "privacy-interpretation",
+      "label": "Optimal randomized equal-prior accuracy and active-pair bound",
+      "declarations": [
+        "TrafficShaping.Law.tv_triangle",
+        "TrafficShaping.Law.optimal_equal_prior_accuracy",
+        "TrafficShaping.active_pair_tv_bound",
+        "TrafficShaping.participation_accuracy_bound",
+        "TrafficShaping.table2_H16_half_privacy_accuracy",
+        "TrafficShaping.table2_H16_half_attainable_accuracy"
+      ]
+    },
+    {
+      "id": "corollary-1-sharpness",
+      "label": "Entire family with B_off=m and B_on=2m",
+      "declarations": [
+        "TrafficShaping.corollary1_sharpness"
+      ]
+    },
+    {
+      "id": "gap-asymptotics",
+      "label": "Actual loss gap: O(1/H) uniformly over D and general zero limit",
+      "declarations": [
+        "TrafficShaping.privacy_gap_uniform_inverse_bound",
+        "TrafficShaping.privacy_gap_isBigO_inverse",
+        "TrafficShaping.privacy_gap_tendsto_zero"
+      ]
+    },
+    {
+      "id": "matching-cost",
+      "label": "Correct operational sorted matcher with explicit linear bound",
+      "declarations": [
+        "TrafficShaping.scan_true_iff_feasible",
+        "TrafficShaping.scan_ops_le_five_mul_H",
+        "TrafficShaping.fastMatch_iff_feasible"
+      ]
+    },
+    {
+      "id": "queue-cost",
+      "label": "Actual H transitions and queue capacity m",
+      "declarations": [
+        "TrafficShaping.execute_exactly_H_steps",
+        "TrafficShaping.executeState_queue_length_le"
+      ]
+    },
+    {
+      "id": "matrix-cardinalities",
+      "label": "Exact row/column counts and C(48,8)=377348994",
+      "declarations": [
+        "TrafficShaping.fullInput_card",
+        "TrafficShaping.offSchedule_card",
+        "TrafficShaping.onSchedule_card",
+        "TrafficShaping.onSchedule_card_fifty"
+      ]
+    },
+    {
+      "id": "example-execution",
+      "label": "Exact unchanged and switched output traces",
+      "declarations": [
+        "TrafficShaping.articleExecute_base",
+        "TrafficShaping.articleExecute_switch",
+        "TrafficShaping.articleExecute_base_servicePairs",
+        "TrafficShaping.articleExecute_switch_servicePairs",
+        "TrafficShaping.articleExecute_switch_first_activation",
+        "TrafficShaping.articleExecute_base_transmission_card",
+        "TrafficShaping.articleExecute_switch_transmission_card"
+      ]
+    },
+    {
+      "id": "strict-threshold-endpoint",
+      "label": "H=2,m=1,D=0,B=1 endpoint counterexample",
+      "declarations": [
+        "TrafficShaping.articleStrictThresholdEndpoint"
+      ]
+    },
+    {
+      "id": "periodic-observation",
+      "label": "Equal limiting density and disjoint deterministic timing laws",
+      "declarations": [
+        "TrafficShaping.phase_zero_density",
+        "TrafficShaping.phase_one_density",
+        "TrafficShaping.phase_laws_tv_one"
+      ]
+    },
+    {
+      "id": "qualitative-causality-gap",
+      "label": "H=8,D=2,m=2,B=3: noncausal loss 1/2 and causal loss 1",
+      "declarations": [
+        "TrafficShaping.qualitative_causality_gap",
+        "TrafficShaping.qualitative_causal_loss_lower"
+      ]
+    },
+    {
+      "id": "table-2-row-1",
+      "label": "Table 2 exact thresholds: H=8, D=1, m=2",
+      "declarations": [
+        "TrafficShaping.table2_row_1"
+      ]
+    },
+    {
+      "id": "table-2-row-2",
+      "label": "Table 2 exact thresholds: H=8, D=2, m=2",
+      "declarations": [
+        "TrafficShaping.table2_row_2"
+      ]
+    },
+    {
+      "id": "table-2-row-3",
+      "label": "Table 2 exact thresholds: H=8, D=3, m=2",
+      "declarations": [
+        "TrafficShaping.table2_row_3"
+      ]
+    },
+    {
+      "id": "table-2-row-4",
+      "label": "Table 2 exact thresholds: H=12, D=1, m=2",
+      "declarations": [
+        "TrafficShaping.table2_row_4"
+      ]
+    },
+    {
+      "id": "table-2-row-5",
+      "label": "Table 2 exact thresholds: H=12, D=2, m=2",
+      "declarations": [
+        "TrafficShaping.table2_row_5"
+      ]
+    },
+    {
+      "id": "table-2-row-6",
+      "label": "Table 2 exact thresholds: H=12, D=3, m=2",
+      "declarations": [
+        "TrafficShaping.table2_row_6"
+      ]
+    },
+    {
+      "id": "table-2-row-7",
+      "label": "Table 2 exact thresholds: H=16, D=1, m=2",
+      "declarations": [
+        "TrafficShaping.table2_row_7"
+      ]
+    },
+    {
+      "id": "table-2-row-8",
+      "label": "Table 2 exact thresholds: H=16, D=2, m=2",
+      "declarations": [
+        "TrafficShaping.table2_row_8"
+      ]
+    },
+    {
+      "id": "table-2-row-9",
+      "label": "Table 2 exact thresholds: H=16, D=3, m=2",
+      "declarations": [
+        "TrafficShaping.table2_row_9"
+      ]
+    },
+    {
+      "id": "table-3-row-1",
+      "label": "Table 3 exact losses: H=8, D=1, m=3, B=5",
+      "declarations": [
+        "TrafficShaping.table3_row_1"
+      ]
+    },
+    {
+      "id": "table-3-row-2",
+      "label": "Table 3 exact losses: H=8, D=2, m=3, B=4",
+      "declarations": [
+        "TrafficShaping.table3_row_2"
+      ]
+    },
+    {
+      "id": "table-3-row-3",
+      "label": "Table 3 exact losses: H=10, D=1, m=4, B=7",
+      "declarations": [
+        "TrafficShaping.table3_row_3"
+      ]
+    },
+    {
+      "id": "table-3-row-4",
+      "label": "Table 3 exact losses: H=10, D=2, m=4, B=7",
+      "declarations": [
+        "TrafficShaping.table3_row_4"
+      ]
+    },
+    {
+      "id": "table-3-row-5",
+      "label": "Table 3 exact losses: H=10, D=1, m=3, B=7",
+      "declarations": [
+        "TrafficShaping.table3_row_5"
+      ]
+    },
+    {
+      "id": "table-3-row-6",
+      "label": "Table 3 exact losses: H=12, D=2, m=3, B=7",
+      "declarations": [
+        "TrafficShaping.table3_row_6"
+      ]
+    },
+    {
+      "id": "table-3-row-7",
+      "label": "Table 3 exact losses: H=12, D=1, m=4, B=9",
+      "declarations": [
+        "TrafficShaping.table3_row_7"
+      ]
+    },
+    {
+      "id": "table-3-row-8",
+      "label": "Table 3 exact losses: H=14, D=2, m=4, B=9",
+      "declarations": [
+        "TrafficShaping.table3_row_8"
+      ]
+    }
+  ]
+}

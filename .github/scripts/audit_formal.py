@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 from collections import Counter
+import json
 from pathlib import Path
 import re
 import sys
@@ -32,6 +33,24 @@ REQUIRED_AUDIT_DECLARATIONS = frozenset({
     "TrafficShaping.causal_optimum_eq",
     "TrafficShaping.noncausal_optimum_eq",
 })
+REQUIRED_ARTICLE_ITEMS = frozenset(
+    [f"equation-{i:02}" for i in range(1, 27)]
+    + [f"lemma-{i}" for i in range(1, 5)]
+    + [f"corollary-{i}" for i in range(1, 6)]
+    + [
+        "theorem-1", "budget-impossibility", "epsilon-independence",
+        "full-input-reduction", "finite-game-duality", "privacy-interpretation",
+        "corollary-1-sharpness", "gap-asymptotics", "matching-cost",
+        "queue-cost", "matrix-cardinalities", "example-execution",
+        "strict-threshold-endpoint", "periodic-observation", "qualitative-causality-gap",
+    ]
+    + [f"table-2-row-{i}" for i in range(1, 10)]
+    + [f"table-3-row-{i}" for i in range(1, 9)]
+)
+DECLARATION_NAME_RE = re.compile(
+    r"TrafficShaping(?:\.[A-Za-z_][A-Za-z0-9_']*)+\Z"
+)
+IMPORT_RE = re.compile(r"(?m)^[ \t]*import[ \t]+([^\r\n]+)$")
 TOKEN_RE = re.compile(r"[A-Za-z_][A-Za-z0-9_']*")
 PRINT_AXIOMS_RE = re.compile(
     r"(?m)^[ \t]*#print[ \t]+axioms[ \t]+"
@@ -41,7 +60,8 @@ PRINT_AXIOMS_RE = re.compile(
 AXIOM_REPORT_RE = re.compile(
     r"(?m)^[ \t]*(?:'(?P<quoted>[^\r\n]+?)'|"
     r"(?P<bare>[A-Za-z_][A-Za-z0-9_'.]*))"
-    r"[ \t]+depends on axioms:[ \t]*\[(?P<axioms>[^\]\r\n]*)\][ \t]*$"
+    r"[ \t]+(?:depends on axioms:[ \t]*\[(?P<axioms>[^\]\r\n]*)\]"
+    r"|does not depend on any axioms)[ \t]*$"
 )
 
 
@@ -144,7 +164,7 @@ def source_files(formal_root: Path) -> list[Path]:
         raise ValueError(f"missing formal entrypoint: {entrypoint}")
     if not tree.is_dir():
         raise ValueError(f"missing formal source tree: {tree}")
-    return [entrypoint, *sorted(tree.rglob("*.lean"))]
+    return [*sorted(formal_root.glob("*.lean")), *sorted(tree.rglob("*.lean"))]
 
 
 def source_placeholder_errors(files: list[Path]) -> list[str]:
@@ -165,6 +185,88 @@ def source_placeholder_errors(files: list[Path]) -> list[str]:
 def audited_declarations(audit_source: str) -> list[str]:
     """Return every active ``#print axioms`` declaration in an audit file."""
     return [match.group("name") for match in PRINT_AXIOMS_RE.finditer(audit_source)]
+
+
+def article_inventory(path: Path) -> tuple[set[str], list[str]]:
+    """Require an explicit Lean anchor for every article formula and result.
+
+    This checks inventory completeness, not the semantic accuracy of an anchor;
+    the latter is established by reviewing the stated Lean propositions.
+    """
+    errors: list[str] = []
+    names: set[str] = set()
+    try:
+        manifest = json.loads(path.read_text(encoding="utf-8"))
+        if not isinstance(manifest, dict) or manifest.get("schema_version") != 1:
+            return set(), ["article inventory must use schema_version 1"]
+        items = manifest.get("items")
+        if not isinstance(items, list) or not all(isinstance(x, dict) for x in items):
+            return set(), ["article inventory items must be a list of objects"]
+        ids = [item.get("id") for item in items]
+        if not all(isinstance(item_id, str) for item_id in ids):
+            return set(), ["article inventory ids must be strings"]
+        counts = Counter(ids)
+        for item_id, count in sorted(counts.items()):
+            if count != 1:
+                errors.append(f"duplicate article item: {item_id}")
+        for item_id in sorted(REQUIRED_ARTICLE_ITEMS - set(ids)):
+            errors.append(f"required article item missing: {item_id}")
+        for item_id in sorted(set(ids) - REQUIRED_ARTICLE_ITEMS):
+            errors.append(f"unrecognized article item: {item_id}")
+        for item in items:
+            declarations = item.get("declarations")
+            if not isinstance(declarations, list) or not declarations:
+                errors.append(f"article item has no Lean declarations: {item['id']}")
+                continue
+            for name in declarations:
+                if not isinstance(name, str) or not DECLARATION_NAME_RE.fullmatch(name):
+                    errors.append(f"invalid article declaration in {item['id']}: {name!r}")
+                else:
+                    names.add(name)
+    except (OSError, UnicodeError, json.JSONDecodeError) as exc:
+        errors.append(f"cannot read article inventory: {exc}")
+    return names, errors
+
+
+def root_import_errors(formal_root: Path) -> list[str]:
+    """Reject unchecked Lean files sitting outside the root import graph."""
+    files = [formal_root / "TrafficShaping.lean",
+             *sorted((formal_root / "TrafficShaping").rglob("*.lean"))]
+    modules = {
+        path.relative_to(formal_root).with_suffix("").as_posix().replace("/", "."): path
+        for path in files
+    }
+    seen: set[str] = set()
+    errors: list[str] = []
+    allowed_top_level = {
+        "TrafficShaping.lean", "Audit.lean", "AuditFoundations.lean", "AuditNoncausal.lean"
+    }
+    errors.extend(
+        f"unexpected top-level formal source: {path.name}"
+        for path in sorted(formal_root.glob("*.lean"))
+        if path.name not in allowed_top_level
+    )
+
+    def visit(module: str) -> None:
+        if module in seen:
+            return
+        seen.add(module)
+        path = modules.get(module)
+        if path is None:
+            errors.append(f"missing local Lean import: {module}")
+            return
+        code = strip_lean_noncode(path.read_text(encoding="utf-8"))
+        for match in IMPORT_RE.finditer(code):
+            for imported in match.group(1).split():
+                if imported == "TrafficShaping" or imported.startswith("TrafficShaping."):
+                    visit(imported)
+
+    visit("TrafficShaping")
+    errors.extend(
+        f"Lean module is not reachable from the root import: {module}"
+        for module in sorted(set(modules) - seen)
+    )
+    return errors
 
 
 def kernel_axiom_errors(
@@ -205,7 +307,7 @@ def kernel_axiom_errors(
     for report in reports:
         names = {
             name.strip()
-            for name in report.group("axioms").split(",")
+            for name in (report.group("axioms") or "").split(",")
             if name.strip()
         }
         unexpected = sorted(names - ALLOWED_KERNEL_AXIOMS)
@@ -221,6 +323,8 @@ def main() -> int:
     parser.add_argument("--formal-root", type=Path, default=Path("formal"))
     parser.add_argument("--audit-file", type=Path, default=Path("formal/Audit.lean"))
     parser.add_argument("--axiom-output", type=Path, required=True)
+    parser.add_argument("--article-inventory", type=Path,
+                        default=Path("formal/article-coverage.json"))
     args = parser.parse_args()
 
     if not args.audit_file.is_file():
@@ -234,6 +338,7 @@ def main() -> int:
         if args.audit_file not in files:
             files.append(args.audit_file)
         errors = source_placeholder_errors(files)
+        errors.extend(root_import_errors(args.formal_root))
     except (OSError, ValueError) as exc:
         print(f"formal source audit failed: {exc}", file=sys.stderr)
         return 1
@@ -246,6 +351,12 @@ def main() -> int:
                 "required final audit declaration missing: " + name
                 for name in missing_inventory
             )
+        article_names, article_errors = article_inventory(args.article_inventory)
+        errors.extend(article_errors)
+        errors.extend(
+            "article declaration is not kernel-audited: " + name
+            for name in sorted(article_names - set(audited_names))
+        )
         kernel_errors, report_count = kernel_axiom_errors(output, audited_names)
     except OSError as exc:
         print(f"kernel axiom audit failed: {exc}", file=sys.stderr)
@@ -258,6 +369,7 @@ def main() -> int:
     print(
         f"Formal source audit passed: {len(files)} files; "
         f"kernel axiom reports: {report_count}; "
+        f"article items: {len(REQUIRED_ARTICLE_ITEMS)}; "
         "allowed axioms: Classical.choice, Quot.sound, propext"
     )
     return 0

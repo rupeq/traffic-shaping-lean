@@ -1,0 +1,27 @@
+test_dropping_formula_is_rejected (test_article_coverage.ArticleCoverageTests.test_dropping_formula_is_rejected) ... ok
+test_duplicate_does_not_replace_a_missing_item (test_article_coverage.ArticleCoverageTests.test_duplicate_does_not_replace_a_missing_item) ... ok
+test_empty_or_invalid_declaration_is_rejected (test_article_coverage.ArticleCoverageTests.test_empty_or_invalid_declaration_is_rejected) ... ok
+test_full_inventory_is_accepted (test_article_coverage.ArticleCoverageTests.test_full_inventory_is_accepted) ... ok
+test_root_rejects_orphan_and_missing_modules (test_article_coverage.ArticleCoverageTests.test_root_rejects_orphan_and_missing_modules) ... ok
+test_top_level_mock_cannot_escape_source_scan (test_article_coverage.ArticleCoverageTests.test_top_level_mock_cannot_escape_source_scan) ... ok
+test_transitive_import_is_sufficient (test_article_coverage.ArticleCoverageTests.test_transitive_import_is_sufficient) ... ok
+test_all_table_rows_cannot_be_replaced_by_a_single_status (test_article_gate.ArticleGateTests.test_all_table_rows_cannot_be_replaced_by_a_single_status) ... ok
+test_changed_transcribed_certificate_weight_is_rejected (test_article_gate.ArticleGateTests.test_changed_transcribed_certificate_weight_is_rejected) ... ok
+test_input_hashes_cannot_name_files_outside_computations (test_article_gate.ArticleGateTests.test_input_hashes_cannot_name_files_outside_computations) ... ok
+test_stale_source_digest_is_rejected (test_article_gate.ArticleGateTests.test_stale_source_digest_is_rejected) ... ok
+test_top_level_pass_cannot_replace_five_corollary_results (test_article_gate.ArticleGateTests.test_top_level_pass_cannot_replace_five_corollary_results) ... ok
+test_transcription_allows_comment_and_whitespace_changes (test_article_gate.ArticleGateTests.test_transcription_allows_comment_and_whitespace_changes) ... ok
+test_actual_lean_formats_are_both_counted (test_formal_audit.KernelAuditTests.test_actual_lean_formats_are_both_counted) ... ok
+test_comment_text_cannot_fabricate_audit_inventory (test_formal_audit.KernelAuditTests.test_comment_text_cannot_fabricate_audit_inventory) ... ok
+test_duplicate_and_unexpected_reports_are_rejected (test_formal_audit.KernelAuditTests.test_duplicate_and_unexpected_reports_are_rejected) ... ok
+test_missing_report_is_rejected_even_if_other_is_axiom_free (test_formal_audit.KernelAuditTests.test_missing_report_is_rejected_even_if_other_is_axiom_free) ... ok
+test_unapproved_axiom_is_rejected (test_formal_audit.KernelAuditTests.test_unapproved_axiom_is_rejected) ... ok
+test_corrupted_certificate_value_is_rejected (test_table_consistency.TableConsistencyTests.test_corrupted_certificate_value_is_rejected) ... ok
+test_corrupted_rational_weight_is_rejected (test_table_consistency.TableConsistencyTests.test_corrupted_rational_weight_is_rejected) ... ok
+test_table_three_rejects_duplicate_and_missing_key (test_table_consistency.TableConsistencyTests.test_table_three_rejects_duplicate_and_missing_key) ... ok
+test_table_two_rejects_duplicate_and_missing_key (test_table_consistency.TableConsistencyTests.test_table_two_rejects_duplicate_and_missing_key) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.007s
+
+OK

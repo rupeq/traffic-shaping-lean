@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 from datetime import datetime, timezone
 import hashlib
+import importlib.util
 import json
 import os
 from pathlib import Path
@@ -26,18 +27,35 @@ FORMAL = ROOT / "formal"
 EXPECTED_TOOLCHAIN = "leanprover/lean4:v4.33.1"
 EXPECTED_LEAN_VERSION = "4.33.1"
 EXPECTED_MATHLIB_REV = "0df444a360eaa60ab8c11dca51a86af692955474"
-REPORT_RE = re.compile(r"(?m)^\s*.*depends on axioms:\s*\[")
+REPORT_RE = re.compile(
+    r"(?m)^[ \t]*[^\r\n]+(?:depends on axioms:[ \t]*\["
+    r"|does not depend on any axioms[ \t]*$)"
+)
 PRINT_RE = re.compile(r"(?m)^\s*#print\s+axioms\s+\S+")
+
+
+def audit_module():
+    spec = importlib.util.spec_from_file_location(
+        "traffic_shaping_formal_audit", ROOT / ".github/scripts/audit_formal.py"
+    )
+    if spec is None or spec.loader is None:
+        raise RuntimeError("cannot load the formal audit implementation")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
 
 
 def source_paths() -> list[Path]:
     paths = [
-        FORMAL / "TrafficShaping.lean",
+        *FORMAL.glob("*.lean"),
         *FORMAL.joinpath("TrafficShaping").rglob("*.lean"),
         FORMAL / "Audit.lean",
         FORMAL / "lean-toolchain",
         FORMAL / "lakefile.toml",
         FORMAL / "lake-manifest.json",
+        FORMAL / "article-coverage.json",
+        ROOT / ".github/scripts/audit_formal.py",
+        ROOT / "verify_formal.py",
     ]
     return sorted(set(paths))
 
@@ -139,9 +157,11 @@ def report_counts(output_dir: Path) -> dict[str, int]:
         axioms_text = axioms_path.read_text(encoding="utf-8")
     except (OSError, UnicodeError):
         axioms_text = ""
+    audit = audit_module()
     return {
-        "audit_commands": len(PRINT_RE.findall(audit_text)),
-        "kernel_axiom_reports": len(REPORT_RE.findall(axioms_text)),
+        "audit_commands": len(audit.audited_declarations(audit.strip_lean_noncode(audit_text))),
+        "kernel_axiom_reports": len(audit.AXIOM_REPORT_RE.findall(axioms_text)),
+        "required_article_items": len(audit.REQUIRED_ARTICLE_ITEMS),
     }
 
 
@@ -248,6 +268,7 @@ def main() -> int:
     result: dict[str, Any] = {
         "status": status,
         "full_optimality_proof_complete": status == "PASS",
+        "article_formalization_complete": status == "PASS",
         "created_at_utc": datetime.now(timezone.utc).isoformat(),
         "source_sha256": after,
         "source_sha256_before": before,
@@ -261,6 +282,9 @@ def main() -> int:
     if errors:
         result["errors"] = errors
     (output_dir / "FULL-OPTIMUM-CHECK.json").write_text(
+        json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+    )
+    (output_dir / "ARTICLE-FORMAL-CHECK.json").write_text(
         json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8"
     )
     print(f"FULL-OPTIMUM-CHECK: {status}")

@@ -10,6 +10,7 @@ _build/
 !/computations/*.log
 !/review/*.log
 !/verification/*.log
+!/verification/article-complete/**/*.log
 # Manuscript editions are maintained locally outside this repository.
 /vak-ru/
 /international-en/
