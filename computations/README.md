@@ -1,8 +1,7 @@
 # Computational materials for Supplement S1
 
 Revision r5 — Artem Dereviago, 10 September 2026.
-Repository: `https://github.com/rupeq/traffic-shaping-lean` (private; access
-requires repository permission).
+Repository: `https://github.com/rupeq/traffic-shaping-lean`.
 This release accompanies the same study in either journal version. All data are
 generated finite combinatorial instances, not captured network traffic. The
 proofs in the manuscript establish the general claims; the computations below

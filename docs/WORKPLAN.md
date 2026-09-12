@@ -1,7 +1,7 @@
 # Verification work plan
 
 1. Reproduce the computations in a clean environment. Independently verify all 95 positive-delay certificates, the finite algorithm checks, zero-delay certificates, and the no-savings checks. Verify that full LP regeneration is documented and compare exact regenerated values when the run completes.
-2. Create the requested private GitHub repository and upload only the reviewed source and reproducibility materials. Record its actual URL and private-access status.
+2. Create the requested GitHub repository and upload only the reviewed source and reproducibility materials. Record its actual URL.
 3. Formalize the model, matching/greedy lemmas, empty-prefix restriction, and the switch-to-service algorithm with causal execution, hard delivery, cap, and schedule preservation proved from their definitions.
 4. Prove the complete covering characterization of the optimum, including arbitrary causal output kernels, attainable optimal base distributions, both privacy inequalities, and independence from every finite nonnegative epsilon. No repair-correctness or converse-lifting assumption may substitute for a missing concrete-model proof.
 5. Check the correspondence with the manuscript and state the precise coverage of secondary results. Build from a fresh checkout and inspect proof axioms.

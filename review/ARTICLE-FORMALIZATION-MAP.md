@@ -96,6 +96,6 @@ The allowed logical axioms are `propext`, `Classical.choice`, and `Quot.sound`; 
 
 The sorted matching cost counts list inspections. It excludes sorting and finite-set preprocessing. The queue cost establishes exactly `H` transitions and capacity `m`; it does not assign a machine-runtime bound to a transition.
 
-Literature attributions, the private-repository access state, and historical counts of program runs are provenance statements. Their source records and exact-code checks accompany the proof inventory; they are not presented as universal Lean theorems. The original model assumptions and the manuscript’s stated limits remain unchanged.
+Literature attributions and historical counts of program runs are provenance statements. Their source records and exact-code checks accompany the proof inventory; they are not presented as universal Lean theorems. The original model assumptions and the manuscript’s stated limits remain unchanged.
 
 Run `python3 verify_article.py` using the pinned toolchain. The resulting `ARTICLE-CHECK.json` binds the completed checks to the exact source hashes.

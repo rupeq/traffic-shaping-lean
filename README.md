@@ -2,7 +2,7 @@
 
 Source code, exact rational certificates, and a Lean formalization for the finite-session traffic-shaping model studied by Artem Dereviago.
 
-Repository: [rupeq/traffic-shaping-lean](https://github.com/rupeq/traffic-shaping-lean). This repository is private while the manuscript and formalization are being prepared. A private GitHub URL does not provide public access; access must be granted separately, or the supplementary archive must accompany a submission.
+Repository: [rupeq/traffic-shaping-lean](https://github.com/rupeq/traffic-shaping-lean).
 
 ## Computational materials
 
